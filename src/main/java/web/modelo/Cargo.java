@@ -1,11 +1,11 @@
 package web.modelo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-
 
 
 @Entity
@@ -16,12 +16,11 @@ public class Cargo {
     private int id;
 	
 	@NotNull
+	@Column(unique = true)
     private String nome;
 	
 	@NotNull
-    private double salario;
-	
- 
+    private double salario;	
 
     public int getId() {
         return id;

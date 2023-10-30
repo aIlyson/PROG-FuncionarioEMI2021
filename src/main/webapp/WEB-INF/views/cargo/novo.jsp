@@ -14,7 +14,6 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	rel="stylesheet">
 </head>
-<body>
 
 	<c:import url="../componentes/cabecalho.jsp" />
 
@@ -59,5 +58,12 @@
 			</div>
 		</div>
 	</div>
+	
+	<c:if test="${not empty mensagem}">
+    <script>
+        alert("${mensagem}");
+    </script>
+   </c:if>
+	
 
 	<c:import url="../componentes/footer.jsp" />

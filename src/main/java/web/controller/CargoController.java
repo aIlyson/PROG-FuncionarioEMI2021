@@ -29,10 +29,14 @@ public class CargoController {
 	}
 	
 	@RequestMapping(value = "/adiciona", method = RequestMethod.POST)
-	public String adiciona(@Valid Cargo cargo, BindingResult result) {
+	public String adiciona(@Valid Cargo cargo, BindingResult result, Model model) {
 		if (result.hasErrors()) {
 			return "redirect:novo";
-		} 
+		}else if(dao.buscaPorNome(cargo.getNome()).size()>0) { 
+            model.addAttribute("mensagem", "Nome já cadastrado. Escolha outro nome.");
+
+			return "cargo/novo";
+		}
 
 		// Adiciona no banco de dados
 		dao.adiciona(cargo);

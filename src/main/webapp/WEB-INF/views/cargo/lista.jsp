@@ -19,7 +19,6 @@
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body>
 
 	<c:import url="../componentes/cabecalho.jsp" />
 
@@ -28,7 +27,7 @@
 			<h1>Listar Cargos</h1>
 		</header>
 
-		<table id="tabela_id"
+		<table class="table datatable" id="tabela_id"
 			class="table table-striped table-bordered dt-responsive nowrap"
 			style="width: 100%">
 			<thead>

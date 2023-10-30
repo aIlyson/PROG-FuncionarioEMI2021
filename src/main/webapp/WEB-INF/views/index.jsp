@@ -108,7 +108,6 @@ p {
 }
 </style>
 </head>
-<body>
 
 	<c:import url="componentes/cabecalho.jsp" />
 
