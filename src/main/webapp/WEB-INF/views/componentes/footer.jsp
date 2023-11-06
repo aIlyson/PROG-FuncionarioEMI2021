@@ -1,4 +1,5 @@
 <style>
+
 .btn i {
 	color: #2E2E2E;
 	transition: transform 0.3s ease-in-out;
@@ -10,8 +11,7 @@
 }
 </style>
 
-<footer class="fixed-bottom text-center text-white"
-	style="background-color: #fcfcfc;">
+<footer class="text-center text-lg-start bg-white text-muted">
 <div class="container m-4 mx-auto">
     <section class="mb-2 text-center d-flex justify-content-center">
         
@@ -27,7 +27,7 @@
 			</a>
 			<!-- Github -->
 			<a class="btn btn-link btn-floating btn-lg text-dark m-1"
-				href="https://github.com/aIlyson/funcionario-EMI2021" role="button"
+				href="https://github.com/aIlyson/PROG-FuncionarioEMI2021" role="button"
 				data-mdb-ripple-color="dark"> <i class="fab fa-github"></i>
 			</a>
 			<!-- Instagram -->
@@ -47,6 +47,5 @@
 		style="background-color: rgba(0, 0, 0, 0.2);">© 2023 - Todos os
 		direitos reservados a Alysson Michel.</div>
 </footer>
-
 </body>
 </html>

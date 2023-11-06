@@ -26,14 +26,14 @@
 <c:import url="../componentes/cabecalho.jsp" />
 
 
-<div class="container mt-5">
+<div class="container mt-5"  style="margin-bottom: 16em;">
 	<header>
 		<h1>Dados do cargo</h1>
 	</header>
 
-	<table class="table datatable" id="tabela_id"
-		class="table table-striped table-bordered dt-responsive nowrap"
-		style="width: 100%">
+	<!-- Table -->
+
+	<table class="table table-striped table-bordered dt-responsive nowrap">
 		<tr>
 			<th scope="col" width="30%">Id</th>
 			<td class="coluna align-middle">${cargo.id}</td>

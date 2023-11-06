@@ -25,7 +25,7 @@
 
 <c:import url="../componentes/cabecalho.jsp" />
 
-<div class="container mt-5">
+<div class="container mt-5" style="margin-bottom: 14em;">
 	<header>
 		<h1>Listar Cargos</h1>
 	</header>

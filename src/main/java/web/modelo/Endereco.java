@@ -35,12 +35,12 @@ public class Endereco {
 	@NotNull
     private String rua;	
 	
-    public int getIdEndereco() {
+    public int getId() {
         return id;
     }
 
-    public void setIdEndereco(int idEndereco) {
-        this.id = idEndereco;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCidade() {
