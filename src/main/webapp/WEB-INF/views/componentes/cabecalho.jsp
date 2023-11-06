@@ -68,6 +68,7 @@
 	color: #373235;
 	transform: scale(1.1);
 }
+
 </style>
 
 </head>
@@ -98,7 +99,7 @@
 								href="<c:url value="/funcionario/novo" />">Funcionario</a> <a
 								class="dropdown-item" href="<c:url value="/cargo/novo" />">Cargo</a>
 							<a class="dropdown-item"
-								href="<c:url value="/dependentes/novo" />">Dependente</a>
+								href="<c:url value="/endereco/novo" />">Endereço</a>
 						</div></li>
 					<li class="nav-item"><a class="nav-link"
 						href="<c:url value="" />">Class3</a></li>
@@ -108,7 +109,7 @@
 						href="<c:url value="" />">Class5</a></li>
 				</ul>
 
-				<a href="https://github.com/aIlyson" target="_blank" class="icon">
+				<a href="https://github.com/aIlyson" target="_blank" class="icon d-none d-lg-block">
 					<i class="fab fa-github"></i>
 				</a>
 			</div>

@@ -1,3 +1,15 @@
+<style>
+.btn i {
+	color: #2E2E2E;
+	transition: transform 0.3s ease-in-out;
+}
+
+.btn i:hover {
+	color: #373235;
+	transform: scale(1.1);
+}
+</style>
+
 <footer class="fixed-bottom text-center text-white"
 	style="background-color: #fcfcfc;">
 <div class="container m-4 mx-auto">

@@ -78,5 +78,10 @@ public class CargoController {
 	    return "redirect:lista";
 	}
 
+	@RequestMapping("/exibe")
+	public String exibe(int id, Model model) {
+		model.addAttribute("cargo", dao.buscaPorId(id));
+		return "cargo/exibe";
+	}
 
 }
