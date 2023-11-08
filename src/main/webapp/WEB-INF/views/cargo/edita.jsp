@@ -23,7 +23,7 @@
 				<input type="hidden" name="id" value="${cargo.id}" required>
 
 				<div class="form-group">
-					<label for="nome">Nome<span class="text-danger">*</span></label> <input
+					<label for="nome">Nome</label> <input
 						type="text" class="form-control" name="nome" autofocus
 						maxlength="250" pattern="[A-Za-z\s]+"
 						title="Preencha o campo apenas com texto" required

@@ -2,6 +2,7 @@ package web.modelo;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -33,6 +34,7 @@ public class Funcionarios {
 	@NotNull
     private boolean status;
     
+	@Column(unique = true)
     private String email;
     
 	@NotNull

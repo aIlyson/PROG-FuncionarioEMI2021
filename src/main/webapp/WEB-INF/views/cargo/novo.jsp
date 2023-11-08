@@ -31,13 +31,13 @@
 							</div>
 
 							<div class="form-group">
-								<label for="nome">Nome:</label> <input type="text" id="nome"
+								<label for="nome">Nome:<span class="text-danger">*</span></label> <input type="text" id="nome"
 									name="nome" pattern="[A-Za-z\s]+"
 									title="Preencha um texto válido!" required class="form-control">
 							</div>
 
 							<div class="form-group">
-								<label for="salario">Salário:</label>
+								<label for="salario">Salário:<span class="text-danger">*</span></label>
 								<div class="input-group">
 									<div class="input-group-prepend">
 										<span class="input-group-text">R$</span>

@@ -17,7 +17,7 @@
 <c:import url="../componentes/cabecalho.jsp" />
 
 
-<div class="container mt-5" style="margin-bottom: 14em;">
+<div class="container mt-5" style="margin-bottom: 7em;">
 	<header>
 		<h1>Listar estados</h1>
 	</header>
@@ -45,7 +45,7 @@
 					<td class="coluna align-middle">${endereco.cidade}</td>
 					<td class="coluna align-middle">${endereco.bairro}</td>
 					<td class="coluna align-middle">${endereco.rua}</td>
-					<td class="coluna align-middle">${endereco.numero}&deg;</td>
+					<td class="coluna align-middle">N&deg; ${endereco.numero}</td>
 					<td>
 						<!-- Exibir --> <a
 						href="<c:url value="/endereco/exibe?id=${endereco.id}"/>"

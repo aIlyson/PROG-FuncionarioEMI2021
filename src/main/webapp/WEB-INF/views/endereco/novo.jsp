@@ -60,34 +60,40 @@
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
-									<label for="cep">CEP:</label> <input type="text" id="cep"
-										name="cep" pattern="[0-9]{5}-?[0-9]{3}" maxlength="9" required
+									<label for="cep">CEP:<span class="text-danger">*</span></label>
+									<input type="text" id="cep" name="cep"
+										pattern="[0-9]{5}-?[0-9]{3}" maxlength="9" required
 										class="form-control">
 								</div>
 
 								<div class="form-group col-md-6">
-									<label for="estado">Estado:</label> <input type="text"
-										id="estado" name="estado" min="2" maxlength="2" required
-										class="form-control" pattern="[A-Z]{2}"
+									<label for="estado">Estado:<span class="text-danger">*</span></label>
+									<input type="text" id="estado" name="estado" min="2"
+										maxlength="2" required class="form-control" pattern="[A-Z]{2}"
 										title="Informe dois caracteres em maiúsculo">
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="cidade">Cidade:</label> <input type="text"
-									id="cidade" name="cidade" required class="form-control">
+								<label for="cidade">Cidade:<span class="text-danger">*</span></label>
+								<input type="text" id="cidade" name="cidade" required
+									class="form-control">
 							</div>
 
 							<div class="form-group">
-								<label for="bairro">Bairro:</label> <input type="text"
-									id="bairro" name="bairro" id="bairro" maxlength="35" pattern="[A-Za-z\s]+"
-									title="Digite seu bairro,  por favor, coloque sem acentuação" required class="form-control">
+								<label for="bairro">Bairro:<span class="text-danger">*</span></label>
+								<input type="text" id="bairro" name="bairro" id="bairro"
+									maxlength="45" pattern="[A-Za-z\s]+"
+									title="Digite seu bairro,  por favor, coloque sem acentuação"
+									required class="form-control">
 							</div>
 
 							<div class="form-group">
-								<label for="rua">Rua:</label> <input type="text" name="rua"
-									id="rua" maxlength="35" pattern="[A-Za-z0-9\s]+"
-									title="Digite sua rua, por favor, coloque sem acentuação" required class="form-control">
+								<label for="rua">Rua:<span class="text-danger">*</span></label>
+								<input type="text" name="rua" id="rua" maxlength="45"
+									pattern="[A-Za-z0-9\s]+"
+									title="Digite sua rua, por favor, coloque sem acentuação"
+									required class="form-control">
 							</div>
 
 							<div class="form-group">
