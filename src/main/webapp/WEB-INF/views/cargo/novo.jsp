@@ -17,6 +17,7 @@
 
 <c:import url="../componentes/cabecalho.jsp" />
 
+
 <div class="container mt-5 position-relative" style="margin-bottom: 6em;">
 	<div class="row justify-content-center">
 		<div class="col-md-6">
@@ -63,6 +64,5 @@
 		alert("${mensagem}");
 	</script>
 </c:if>
-
 
 <c:import url="../componentes/footer.jsp" />

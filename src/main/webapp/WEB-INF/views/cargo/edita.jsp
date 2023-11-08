@@ -14,6 +14,7 @@
 
 	<c:import url="../componentes/cabecalho.jsp" />
 
+
 	<div class="container mt-5">
 		<form action="altera" method="POST"
 			class="bg-white p-4 shadow-sm rounded">
@@ -41,10 +42,10 @@
 				<div class="form-group">
 					<a href="<c:url value='/cargo/lista' />"
 						class="btn btn-secondary btn-lg"> <span
-						class="glyphicon glyphicon-remove"></span> Cancelar
+						class="fas fa-times"></span> Cancelar
 					</a>
 					<button type="submit" class="btn btn-primary btn-lg">
-						<span class="glyphicon glyphicon-refresh"></span> Atualizar
+						<span class="fas fa-refresh"></span> Atualizar
 					</button>
 				</div>
 			</fieldset>

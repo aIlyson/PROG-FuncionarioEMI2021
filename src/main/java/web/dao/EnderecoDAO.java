@@ -18,8 +18,12 @@ public class EnderecoDAO {
 	private EntityManager manager;
 
 	public void adiciona(Endereco endereco) {
-		manager.persist(endereco);
+	    if (endereco.getCep() != null && endereco.getCep().length() > 9) {
+	        throw new IllegalArgumentException("CEP deve ter no máximo 9 caracteres");
+	    }
+	    manager.persist(endereco);
 	}
+
 
 	public void altera(Endereco endereco) {
 		manager.merge(endereco);
@@ -34,8 +38,8 @@ public class EnderecoDAO {
 				.setParameter("cep", cep).getResultList();
 	}
 
-	public String buscarNomePorId(int id) {
-		return manager.createQuery("select e.nome from Endereco e where e.id = :id", String.class)
+	public String buscarCepPorId(int id) {
+		return manager.createQuery("select e.cep from Endereco e where e.id = :id", String.class)
 				.setParameter("id", id).getSingleResult();
 	}
 

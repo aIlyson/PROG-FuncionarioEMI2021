@@ -25,8 +25,8 @@ public class Endereco {
 	@NotNull
 	private String numero;
     
+	@Size(max = 9)
 	@NotNull
-	@Size(max = 8)
 	private String cep;
 	
 	@NotNull

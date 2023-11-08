@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dados Cargo</title>
+<title>Dados Endereço</title>
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 </head>
@@ -19,7 +19,7 @@
 
 <div class="container mt-5" style="margin-bottom: 16em;">
 	<header>
-		<h1>Dados do cargo</h1>
+		<h1>Dados do endereço</h1>
 	</header>
 
 	<!-- Table -->
@@ -27,26 +27,47 @@
 	<table class="table table-striped table-bordered dt-responsive nowrap">
 		<tr>
 			<th scope="col" width="30%">Id</th>
-			<td class="coluna align-middle">${cargo.id}</td>
+			<td class="coluna align-middle">${endereco.id}</td>
 		</tr>
 		<tr>
-			<th>Nome</th>
-			<td class="coluna align-middle">${cargo.nome}</td>
+			<th>Cep</th>
+			<td class="coluna align-middle">${endereco.cep}</td>
 		</tr>
+		<tr>
+			<th>Estado</th>
+			<td class="coluna align-middle">${endereco.estado}</td>
+		</tr>
+		<tr>
+			<th>Cidade</th>
+			<td class="coluna align-middle">${endereco.cidade}</td>
+		</tr>
+		<tr>
+			<th>Bairro</th>
+			<td class="coluna align-middle">${endereco.bairro}</td>
+		</tr>
+		<tr>
+			<th>Rua</th>
+			<td class="coluna align-middle">${endereco.rua}</td>
+		</tr>
+		<tr>
+			<th>Número</th>
+			<td class="coluna align-middle">${endereco.numero}</td>
+		</tr>
+
 	</table>
+
 	<div align="center">
 		<!-- Cadastrar -->
-		<a href="<c:url value="/cargo/novo" />" class="btn btn-secondary"><span
+		<a href="<c:url value="/endereco/novo" />" class="btn btn-secondary"><span
 			class="fas fa-check"></span> Cadastrar</a>
 		<!-- Editar -->
-		<a href="<c:url value="/cargo/edita?id=${cargo.id}" />"
+		<a href="<c:url value="/endereco/edita?id=${endereco.id}" />"
 			class="btn btn-primary"><span class="fas fa-pencil"></span>
 			Editar </a>
 		<!-- Excluir -->
 		<a href="#" class="btn btn-danger" data-toggle="modal"
-			data-target="#modal${cargo.id}" data-placement="bottom"
-			title="Excluir"> <span class="fas fa-trash"></span> Excluir
-		</a>
+			data-target="#modal${endereco.id}" data-placement="bottom"
+			title="Excluir"><span class="fas fa-trash"></span> Excluir </a>
 	</div>
 	<!-- Modal -->
 	<div id="modal${cargo.id}" class="modal fade" tabindex="-1"

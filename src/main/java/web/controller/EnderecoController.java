@@ -48,7 +48,7 @@ public class EnderecoController {
     @RequestMapping("/lista")
     public String lista(Model model) {
         List<Endereco> listaEndereco = dao.listar();
-        model.addAttribute("enderecos", listaEndereco);
+        model.addAttribute("endereco", listaEndereco);
         return "endereco/lista";
     }
 

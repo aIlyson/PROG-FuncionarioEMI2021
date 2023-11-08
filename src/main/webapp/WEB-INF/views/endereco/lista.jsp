@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Listar Cargos</title>
+<title>Listar Endereço</title>
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 </head>
@@ -19,7 +19,7 @@
 
 <div class="container mt-5" style="margin-bottom: 14em;">
 	<header>
-		<h1>Listar Cargos</h1>
+		<h1>Listar estados</h1>
 	</header>
 
 	<table class="table datatable" id="tabela_id"
@@ -28,50 +28,55 @@
 		<thead>
 			<tr>
 				<th class="d-none" scope="col">ID</th>
-				<th scope="col">Nome</th>
-				<th scope="col">Salário</th>
-				<th scope="col">Opções</th>
+				<th scope="col">Cep</th>
+				<th scope="col">Estado</th>
+				<th scope="col">Cidade</th>
+				<th scope="col">Bairro</th>
+				<th scope="col">Rua</th>
+				<th scope="col">Número</th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="cargo" items="${cargos}">
+			<c:forEach var="endereco" items="${endereco}">
 				<tr>
-					<td class="coluna d-none align-middle">${cargo.id}</td>
-					<td class="coluna align-middle">${cargo.nome}</td>
-					<td class="coluna align-middle"><fmt:formatNumber
-							value="${cargo.salario}" type="currency" currencyCode="BRL"
-							currencySymbol="R$ " /></td>
+					<td class="coluna d-none align-middle">${endereco.id}</td>
+					<td class="coluna align-middle">${endereco.cep}</td>
+					<td class="coluna align-middle">${endereco.estado}</td>
+					<td class="coluna align-middle">${endereco.cidade}</td>
+					<td class="coluna align-middle">${endereco.bairro}</td>
+					<td class="coluna align-middle">${endereco.rua}</td>
+					<td class="coluna align-middle">${endereco.numero}&deg;</td>
 					<td>
 						<!-- Exibir --> <a
-						href="<c:url value="/cargo/exibe?id=${cargo.id}"/>"
+						href="<c:url value="/endereco/exibe?id=${endereco.id}"/>"
 						class="btn btn-secondary" data-toggle="tooltip"
 						data-bs-placement="bottom" title="Exibir"> <i
 							class="fas fa-pencil-alt text-white"></i>
 					</a> <!-- Editar --> <a
-						href="<c:url value='/cargo/edita?id=${cargo.id}' />"
+						href="<c:url value='/endereco/edita?id=${endereco.id}' />"
 						class="btn btn-primary" data-toggle="tooltip"
 						data-placement="bottom" title="Editar"> Editar </a> <!-- Excluir -->
 						<a href="#" class="btn btn-danger" data-toggle="modal"
-						data-target="#modal${cargo.id}" data-placement="bottom"
+						data-target="#modal${endereco.id}" data-placement="bottom"
 						title="Excluir"> Excluir </a> <!-- Modal -->
-						<div id="modal${cargo.id}" class="modal fade" tabindex="-1"
+						<div id="modal${endereco.id}" class="modal fade" tabindex="-1"
 							role="dialog" aria-labelledby="exampleModalLabel"
 							aria-hidden="true">
 							<div class="modal-dialog" role="document">
 								<div class="modal-content">
 									<div class="modal-header">
 										<h5 class="modal-title" id="exampleModalLabel">Exclusão
-											do cargo</h5>
+											do endereço</h5>
 										<button type="button" class="close" data-dismiss="modal"
 											aria-label="Close">
 											<span aria-hidden="true">&times;</span>
 										</button>
 									</div>
 									<div class="modal-body">
-										<p>Deseja realmente excluir o cargo?</p>
+										<p>Deseja realmente excluir o endereço?</p>
 									</div>
 									<div class="modal-footer">
-										<a href="<c:url value='/cargo/remove?id=${cargo.id}' />"
+										<a href="<c:url value='/endereco/remove?id=${endereco.id}' />"
 											class="btn btn-danger">Excluir</a>
 										<button type="button" class="btn btn-secondary"
 											data-dismiss="modal">Fechar</button>
