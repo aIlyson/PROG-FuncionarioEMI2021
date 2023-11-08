@@ -25,20 +25,22 @@
 
 			<input type="hidden" name="cep" value="${endereco.cep}" required>
 
-			<input type="hidden" name="estado" value="${endereco.estado}" required>
-
-			<input type="hidden" name="cidade" value="${endereco.cidade}" required>
+			<input type="hidden" name="estado" value="${endereco.estado}"
+				required> <input type="hidden" name="cidade"
+				value="${endereco.cidade}" required>
 
 
 			<div class="form-group">
 				<label for="bairro">Bairro</label> <input type="text" name="bairro"
-					pattern="[A-Za-z\s]+" title="Digite seu bairro" required
-					class="form-control" value="${endereco.bairro}">
+					maxlength="30" pattern="[A-Za-z\s]+"
+					title="Digite seu bairro,  por favor, coloque sem acentuação"
+					required class="form-control" value="${endereco.bairro}">
 			</div>
 
 			<div class="form-group">
 				<label for="rua">Rua</label> <input type="text" name="rua"
-					pattern="[A-Za-z0-9\s]+" title="Digite sua rua" required
+					maxlength="30" pattern="[A-Za-z0-9\s]+"
+					title="Digite sua rua, por favor, coloque sem acentuação" required
 					class="form-control" value="${endereco.rua}">
 			</div>
 

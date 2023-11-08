@@ -64,11 +64,11 @@
 										name="cep" pattern="[0-9]{5}-?[0-9]{3}" maxlength="9" required
 										class="form-control">
 								</div>
-								
+
 								<div class="form-group col-md-6">
 									<label for="estado">Estado:</label> <input type="text"
-										id="estado" name="estado" min="2" maxlength="2" required class="form-control"
-										pattern="[A-Z]{2}"
+										id="estado" name="estado" min="2" maxlength="2" required
+										class="form-control" pattern="[A-Z]{2}"
 										title="Informe dois caracteres em maiúsculo">
 								</div>
 							</div>
@@ -80,14 +80,14 @@
 
 							<div class="form-group">
 								<label for="bairro">Bairro:</label> <input type="text"
-									id="bairro" name="bairro" maxlength="50" pattern="[A-Za-z\s]+"
-									title="Digite seu bairro" required class="form-control">
+									id="bairro" name="bairro" id="bairro" maxlength="35" pattern="[A-Za-z\s]+"
+									title="Digite seu bairro,  por favor, coloque sem acentuação" required class="form-control">
 							</div>
 
 							<div class="form-group">
 								<label for="rua">Rua:</label> <input type="text" name="rua"
-									maxlength="50" pattern="[A-Za-z0-9\s]+" title="Digite sua rua"
-									required class="form-control">
+									id="rua" maxlength="35" pattern="[A-Za-z0-9\s]+"
+									title="Digite sua rua, por favor, coloque sem acentuação" required class="form-control">
 							</div>
 
 							<div class="form-group">
