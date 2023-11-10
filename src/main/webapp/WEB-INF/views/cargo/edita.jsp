@@ -25,7 +25,7 @@
 				<div class="form-group">
 					<label for="nome">Nome</label> <input
 						type="text" class="form-control" name="nome" autofocus
-						maxlength="250" pattern="[A-Za-z\s]+"
+						maxlength="50" pattern="[A-Za-z\s]+"
 						title="Preencha o campo apenas com texto" required
 						value="${cargo.nome}">
 				</div>

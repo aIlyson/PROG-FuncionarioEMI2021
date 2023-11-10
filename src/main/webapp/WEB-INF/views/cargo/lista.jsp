@@ -22,15 +22,15 @@
 		<h1>Listar Cargos</h1>
 	</header>
 
-	<table class="table datatable" id="tabela_id"
+	<table class="table datatable" id="table"
 		class="table table-striped table-bordered dt-responsive nowrap"
 		style="width: 100%">
 		<thead>
 			<tr>
 				<th class="d-none" scope="col">ID</th>
-				<th scope="col">Nome</th>
-				<th scope="col">Salário</th>
-				<th scope="col">Opções</th>
+				<th class="font-semibold uppercase px-6" scope="col">Nome</th>
+				<th class="font-semibold uppercase px-6" scope="col">Salário</th>
+				<th class="font-semibold uppercase px-6" scope="col">Opções</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -90,5 +90,12 @@
 
 <c:import url="../componentes/footer.jsp" />
 
+
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script
+	src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+<script
+	src="../resources/js/datatables.js"></script>

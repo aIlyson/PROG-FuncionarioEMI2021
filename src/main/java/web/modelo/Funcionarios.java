@@ -20,7 +20,7 @@ public class Funcionarios {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idFuncionarios;
+    private int id;
 	
 	@NotNull
 	@Size(max = 50)
@@ -31,7 +31,7 @@ public class Funcionarios {
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date dataNascimento;
     
-	@NotNull
+	
     private boolean status;
     
 	@Column(unique = true)
@@ -41,12 +41,12 @@ public class Funcionarios {
 	@ManyToOne
 	private Endereco endereco;
 
-    public int getIdFuncionarios() {
-        return idFuncionarios;
+    public int getId() {
+        return id;
     }
 
-    public void setIdFuncionarios(int idFuncionarios) {
-        this.idFuncionarios = idFuncionarios;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -92,7 +92,7 @@ public class Funcionarios {
     @Override
     public String toString() {
         return "Funcionario{" +
-                "idFuncionarios=" + idFuncionarios +
+                "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", dataNascimento=" + dataNascimento +
                 ", status=" + status +

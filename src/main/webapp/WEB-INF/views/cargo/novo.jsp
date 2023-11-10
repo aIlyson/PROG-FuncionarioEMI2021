@@ -32,8 +32,8 @@
 
 							<div class="form-group">
 								<label for="nome">Nome:<span class="text-danger">*</span></label> <input type="text" id="nome"
-									name="nome" pattern="[A-Za-z\s]+"
-									title="Preencha um texto válido!" required class="form-control">
+									name="nome" maxlength="50" pattern="[A-Za-z\s]+"
+									title="Digite seu nome,  por favor, coloque sem acentuação" required class="form-control">
 							</div>
 
 							<div class="form-group">

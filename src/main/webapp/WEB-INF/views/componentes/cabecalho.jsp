@@ -96,7 +96,7 @@
 						aria-expanded="false"> Cadastro </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item"
-								href="<c:url value="/funcionario/novo" />">Funcionario</a> <a
+								href="<c:url value="/funcionarios/novo" />">Funcionario</a> <a
 								class="dropdown-item" href="<c:url value="/cargo/novo" />">Cargo</a>
 							<a class="dropdown-item"
 								href="<c:url value="/endereco/novo" />">Endereço</a>
