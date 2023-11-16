@@ -27,7 +27,6 @@ $(document).ready(function() {
 							$('#cidade').val(response.municipio);
 							$('#estado').val(response.uf);
 							$('#email').val(response.email);
-							$('#razao, #cep, #estado').prop('disabled', true);
 						} else {
 							resetFields();
 							$('#mensagem-erro').show();

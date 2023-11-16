@@ -31,7 +31,6 @@ public class EmpresaController {
 	@RequestMapping(value = "/adiciona", method = RequestMethod.POST)
 	public String adiciona(@Valid Empresa empresa, BindingResult result, Model model) {
 	    if (result.hasErrors()) {
-	    	System.out.println(result);
 	        return "redirect:novo";
 	    } else if (dao.buscaPorCnpj(empresa.getCnpj()).size() > 0) {
 	        model.addAttribute("mensagem", "Cnpj já cadastrado. Escolha outro cnpj.");

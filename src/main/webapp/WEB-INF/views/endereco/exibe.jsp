@@ -30,7 +30,7 @@
 			<td class="coluna align-middle">${endereco.id}</td>
 		</tr>
 		<tr>
-			<th>Cep</th>
+			<th>CEP</th>
 			<td class="coluna align-middle">${endereco.cep}</td>
 		</tr>
 		<tr>

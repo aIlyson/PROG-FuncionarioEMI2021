@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dados Cargo</title>
+<title>Dados Empresa</title>
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 </head>
@@ -19,7 +19,7 @@
 
 <div class="container mt-5" style="margin-bottom: 16em;">
 	<header>
-		<h1>Dados do cargo</h1>
+		<h1>Dados da empresa</h1>
 	</header>
 
 	<!-- Table -->
@@ -27,24 +27,48 @@
 	<table class="table table-striped table-bordered dt-responsive nowrap">
 		<tr>
 			<th scope="col" width="30%">Id</th>
-			<td class="coluna align-middle">${cargo.id}</td>
+			<td class="coluna align-middle">${empresa.id}</td>
+		</tr>
+		<tr>
+			<th>CNPJ</th>
+			<td class="coluna align-middle">${empresa.cnpj}</td>
+		</tr>
+		<tr>
+			<th>Razão Social</th>
+			<td class="coluna align-middle">${empresa.razao}</td>
 		</tr>
 		<tr>
 			<th>Nome</th>
-			<td class="coluna align-middle">${cargo.nome}</td>
+			<td class="coluna align-middle">${empresa.nome}</td>
+		</tr>
+		<tr>
+			<th>CEP</th>
+			<td class="coluna align-middle">${empresa.cep}</td>
+		</tr>
+		<tr>
+			<th>Estado</th>
+			<td class="coluna align-middle">${empresa.estado}</td>
+		</tr>
+		<tr>
+			<th>Cidade</th>
+			<td class="coluna align-middle">${empresa.cidade}</td>
+		</tr>
+		<tr>
+			<th>Email</th>
+			<td class="coluna align-middle">${empresa.email}</td>
 		</tr>
 	</table>
 	<div align="center">
 		<!-- Cadastrar -->
-		<a href="<c:url value="/cargo/novo" />" class="btn btn-secondary"><span
+		<a href="<c:url value="/empresa/novo" />" class="btn btn-secondary"><span
 			class="fas fa-check"></span> Cadastrar</a>
 		<!-- Editar -->
-		<a href="<c:url value="/cargo/edita?id=${cargo.id}" />"
+		<a href="<c:url value="/empresa/edita?id=${empresa.id}" />"
 			class="btn btn-primary"><span class="fas fa-pencil"></span>
 			Editar </a>
 		<!-- Excluir -->
 		<a href="#" class="btn btn-danger" data-toggle="modal"
-			data-target="#modal${cargo.id}" data-placement="bottom"
+			data-target="#modal${empresa.id}" data-placement="bottom"
 			title="Excluir"> <span class="fas fa-trash"></span> Excluir
 		</a>
 	</div>
@@ -54,18 +78,18 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Exclusão do
-						cargo</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Exclusão da
+						empresa cadastrada</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<p>Deseja realmente excluir o cargo?</p>
+					<p>Deseja realmente excluir essa empresa?</p>
 				</div>
 				<div class="modal-footer">
-					<a href="<c:url value='/cargo/remove?id=${cargo.id}' />"
+					<a href="<c:url value='/empresa/remove?id=${empresa.id}' />"
 						class="btn btn-danger">Excluir</a>
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal">Fechar</button>

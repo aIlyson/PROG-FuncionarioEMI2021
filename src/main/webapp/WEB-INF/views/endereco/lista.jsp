@@ -28,8 +28,8 @@
 		<thead>
 			<tr>
 				<th class="d-none" scope="col">ID</th>
-				<th class="font-semibold uppercase px-6" scope="col">Cep</th>
-				<th class="font-semibold uppercase px-6" scope="col">Estado</th>
+				<th class="font-semibold uppercase px-6" scope="col">CEP</th>
+				<th class="font-semibold uppercase px-6" scope="col">UF</th>
 				<th class="font-semibold uppercase px-6" scope="col">Cidade</th>
 				<th class="font-semibold uppercase px-6" scope="col">Bairro</th>
 				<th class="font-semibold uppercase px-6" scope="col">Rua</th>

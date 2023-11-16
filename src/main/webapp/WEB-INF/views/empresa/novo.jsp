@@ -48,20 +48,21 @@
 							<div class="form-group">
 								<label for="razao">Razão social:<span
 									class="text-danger">*</span></label><br /> <input id="razao"
-									type="text" name="razao" maxlength="150"
-									class="form-control">
+									type="text" name="razao" maxlength="150" required class="form-control">
 							</div>
 
 							<div class="form-group">
 								<label for="nome">Nome Fantasia:<span
 									class="text-danger">*</span></label> <input type="text" id="nome"
-									name="nome" maxlength="150" required class="form-control">
+									name="nome" maxlength="150" pattern="[A-Za-z\s]+"
+									title="Digite o nome,  por favor, coloque sem acentuação"
+									required class="form-control">
 							</div>
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="cep">CEP:<span class="text-danger">*</span></label>
-									<input type="text" id="cep" name="cep"  required
+									<input type="text" id="cep" name="cep" required
 										class="form-control">
 								</div>
 
@@ -75,7 +76,8 @@
 
 							<div class="form-group">
 								<label for="cidade">Cidade:<span class="text-danger">*</span></label>
-								<input type="text" id="cidade" name="cidade" required
+								<input type="text" id="cidade" pattern="[A-Za-z\s]+"
+									title="Digite o nome,  por favor, coloque sem acentuação" name="cidade" required
 									class="form-control">
 							</div>
 

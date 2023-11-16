@@ -31,14 +31,13 @@ public class FuncionariosController {
 	
 	@RequestMapping("/novo")
 	public String novo(Model model) {
-		this.lista_enderecos = dao_endereco.listar();
-		if(this.lista_enderecos.size()>0) {
-			model.addAttribute("enderecos",this.lista_enderecos);
-			return "funcionarios/novo";
-		}
-			return "funcionarios/novo";
-		
+	    this.lista_enderecos = dao_endereco.listar();
+	    if (this.lista_enderecos.size() > 0) {
+	        model.addAttribute("enderecos", this.lista_enderecos);
+	    }
+	    return "funcionarios/novo";
 	}
+
 	
 	@RequestMapping(value = "/adiciona", method = RequestMethod.POST)
 	public String adiciona(@Valid Funcionarios funcionarios, BindingResult result, Model model) {

@@ -36,7 +36,7 @@
 				<th class="font-semibold uppercase px-6" scope="col">UF</th>
 				<th class="font-semibold uppercase px-6" scope="col">Cidade</th>
 				<th class="font-semibold uppercase px-6" scope="col">Email</th>
-				<th class="font-semibold uppercase px-6" scope="col">Ações</th>
+				<th class="font-semibold uppercase px-6" scope="col">Opções</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -59,10 +59,13 @@
 					</a> <!-- Editar --> <a
 						href="<c:url value='/empresa/edita?id=${empresa.id}' />"
 						class="btn btn-primary" data-toggle="tooltip"
-						data-placement="bottom" title="Editar"> Editar </a> <!-- Excluir -->
-						<a href="#" class="btn btn-danger" data-toggle="modal"
-						data-target="#modal${empresa.id}" data-placement="bottom"
-						title="Excluir"> Excluir </a> <!-- Modal -->
+						data-placement="bottom" title="Editar"> <i
+							class="fas fa-solid fa-pencil text-white"></i>
+					</a> <!-- Excluir --> <a href="#" class="btn btn-danger"
+						data-toggle="modal" data-target="#modal${empresa.id}"
+						data-placement="bottom" title="Excluir"> <i
+							class="fas fa-solid fa-trash text-white"></i>
+					</a> <!-- Modal -->
 						<div id="modal${empresa.id}" class="modal fade" tabindex="-1"
 							role="dialog" aria-labelledby="exampleModalLabel"
 							aria-hidden="true">
