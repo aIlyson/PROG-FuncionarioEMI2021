@@ -31,7 +31,7 @@ public class Funcionarios {
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date dataNascimento;
     
-	
+	@NotNull
     private boolean status;
     
 	@Column(unique = true)

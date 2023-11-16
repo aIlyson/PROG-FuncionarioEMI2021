@@ -57,7 +57,9 @@
 							</div>
 						</div>
 					</td>
-					<td class="coluna align-middle">${funcionarios.dataNascimento}</td>
+					<td class="coluna align-middle"><fmt:formatDate
+							pattern="dd/MM/yyyy" value="${funcionarios.dataNascimento}"
+							var="dataFormatada" /> ${dataFormatada}</td>
 					<td class="coluna align-middle">
 						<div>${funcionarios.endereco.cep}</div>
 						<div>${funcionarios.endereco.cidade}</div>
@@ -67,13 +69,12 @@
 						class="text-white text-sm w-1/3 pb-1 font-semibold px-2 rounded-full"
 						style="background-color: ${funcionarios.status ? '#00cc66' : '#ff6666'};">
 							${funcionarios.status ? 'Ativo' : 'Inativo'} </span></td>
-
 					<td class="coluna align-middle">
 						<!-- Exibir --> <a
 						href="<c:url value="/funcionarios/exibe?id=${funcionarios.id}"/>"
 						class="btn btn-secondary" data-toggle="tooltip"
 						data-bs-placement="bottom" title="Exibir"> <i
-							class="fas fa-pencil-alt text-white"></i>
+							class="fas fa-solid fa-eye text-white"></i>
 					</a> <!-- Editar --> <a
 						href="<c:url value='/funcionarios/edita?id=${funcionarios.id}' />"
 						class="btn btn-primary" data-toggle="tooltip"

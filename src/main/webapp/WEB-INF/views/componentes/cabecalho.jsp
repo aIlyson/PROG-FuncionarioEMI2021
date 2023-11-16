@@ -68,7 +68,6 @@
 	color: #373235;
 	transform: scale(1.1);
 }
-
 </style>
 
 </head>
@@ -95,22 +94,45 @@
 						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> Cadastro </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="<c:url value="/empresa/novo" />">Empresa</a>
 							<a class="dropdown-item"
 								href="<c:url value="/funcionarios/novo" />">Funcionario</a> <a
 								class="dropdown-item" href="<c:url value="/cargo/novo" />">Cargo</a>
-							<a class="dropdown-item"
-								href="<c:url value="/endereco/novo" />">Endereço</a>
+							<a class="dropdown-item" href="<c:url value="/endereco/novo" />">Endereço</a>
 						</div></li>
-					<li class="nav-item"><a class="nav-link"
-						href="<c:url value="" />">Class3</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="<c:url value="" />">Class4</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="<c:url value="" />">Class5</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> Contratos </a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="<c:url value="" />">1</a> <a
+								class="dropdown-item" href="<c:url value="/" />">2</a> <a
+								class="dropdown-item" href="<c:url value="/" />">3</a>
+						</div></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> Férias e Licenças </a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="<c:url value="" />">Gestão de
+								férias</a> <a class="dropdown-item" href="<c:url value="/" />">Gestão
+								de afastamento</a>
+						</div></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> Relatório </a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="<c:url value="/empresa/lista" />">Empresa</a>
+							<a class="dropdown-item"
+								href="<c:url value="/funcionarios/lista" />">Funcionario</a> <a
+								class="dropdown-item" href="<c:url value="/cargo/lista" />">Cargo</a>
+							<a class="dropdown-item" href="<c:url value="/endereco/lista" />">Endereço</a>
+						</div></li>
 				</ul>
 
-				<a href="https://github.com/aIlyson" target="_blank" class="icon d-none d-lg-block">
-					<i class="fab fa-github"></i>
+				<a href="https://github.com/aIlyson" target="_blank"
+					class="icon d-none d-lg-block"> <i class="fab fa-github"></i>
 				</a>
 			</div>
 		</div>

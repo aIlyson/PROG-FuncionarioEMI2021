@@ -46,7 +46,7 @@
 						href="<c:url value="/cargo/exibe?id=${cargo.id}"/>"
 						class="btn btn-secondary" data-toggle="tooltip"
 						data-bs-placement="bottom" title="Exibir"> <i
-							class="fas fa-pencil-alt text-white"></i>
+							class="fas fa-solid fa-eye text-white"></i>
 					</a> <!-- Editar --> <a
 						href="<c:url value='/cargo/edita?id=${cargo.id}' />"
 						class="btn btn-primary" data-toggle="tooltip"

@@ -1,11 +1,12 @@
 package web.modelo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -16,41 +17,88 @@ public class Empresa {
     private int id;
 	
 	@NotNull
-    private String nome;
+	@Column(unique = true)
+	private String cnpj;
+	
+	@NotNull
+	private String razao;
+	
+	@Size(max = 12)
+	@NotNull
+	private String cep;
     
 	@NotNull
-	private String cnpj;
+    private String nome;
+	
+	@NotNull
+    private String cidade;
+    
+	@NotNull
+	private String estado;
 
 	private String email;
 	
-	@NotNull
-	@ManyToOne
-	private Endereco endereco;
-
-    public int getIdEmpresa() {
+    public int getId() {
         return id;
     }
 
-    public void setIdEmpresa(int idEmpresa) {
+    public void setId(int idEmpresa) {
         this.id = idEmpresa;
     }
 
-    public String getNomeEmpresa() {
-        return nome;
-    }
 
-    public void setNomeEmpresa(String nomeEmpresa) {
-        this.nome = nomeEmpresa;
-    }
+    public String getNome() {
+		return nome;
+	}
 
-    public String getCnpj() {
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCnpj() {
         return cnpj;
     }
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
+    
 
+    public String getRazao() {
+        return razao;
+    }
+
+    public void setRazao(String razao) {
+        this.razao = razao;
+    }
+    
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+    
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    
     public String getEmail() {
         return email;
     }
@@ -58,21 +106,17 @@ public class Empresa {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-	public Endereco getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
-	}
 
     @Override
     public String toString() {
         return "Empresa{" +
-                "idEmpresa=" + id +
-                ", nomeEmpresa='" + nome + '\'' +
+                "id=" + id +
+                ", nomeEmpresa='" + nome + '\'' + 
                 ", cnpj='" + cnpj + '\'' +
+                ", cep='" + cep + '\'' +
+                ", estado='" + estado + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", razao='" + razao + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }

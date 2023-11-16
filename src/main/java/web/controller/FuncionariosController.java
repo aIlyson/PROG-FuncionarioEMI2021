@@ -42,8 +42,6 @@ public class FuncionariosController {
 	
 	@RequestMapping(value = "/adiciona", method = RequestMethod.POST)
 	public String adiciona(@Valid Funcionarios funcionarios, BindingResult result, Model model) {
-		System.out.println(result);
-		System.out.println(funcionarios);
 		if (result.hasErrors()) {
 			return "redirect:novo";
 		}else if(dao.buscaPorEmail(funcionarios.getEmail()).size()>0) { 

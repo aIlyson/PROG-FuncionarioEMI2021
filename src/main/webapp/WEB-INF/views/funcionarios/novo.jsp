@@ -34,8 +34,10 @@
 
 							<div class="form-group">
 								<label for="nome">Nome:<span class="text-danger">*</span></label>
-								<input type="text" id="nome" name="nome" maxlength="150" pattern="[A-Za-z\s]+"
-									title="Digite seu nome,  por favor, coloque sem acentuação" required class="form-control">
+								<input type="text" id="nome" name="nome" maxlength="150"
+									pattern="[A-Za-z\s]+"
+									title="Digite seu nome,  por favor, coloque sem acentuação"
+									required class="form-control">
 							</div>
 
 							<div class="form-group">
@@ -46,7 +48,7 @@
 									title="Formato inválido. Use dd/MM/yyyy" required
 									class="form-control">
 							</div>
-
+							
 							<div class="form-group">
 								<label for="endereco.id">Endereço:<span
 									class="text-danger">*</span></label>
@@ -116,7 +118,8 @@
 
 							<div class="form-group">
 								<label for="email">E-mail:</label> <input type="email"
-									id="email" name="email" maxlength="100" required class="form-control">
+									id="email" name="email" maxlength="100" required
+									class="form-control">
 							</div>
 
 							<div class="form-group">

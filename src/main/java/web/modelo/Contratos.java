@@ -15,8 +15,6 @@ import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
-
-
 @Entity
 public class Contratos {
 	
@@ -43,18 +41,22 @@ public class Contratos {
 	
 	@NotNull
 	@ManyToOne
+	private Funcionarios funcionarios;
+	
+	@NotNull
+	@ManyToOne
 	private Cargo cargo;
 	
 	@NotNull
 	@ManyToOne
 	private Empresa empresa;
 
-    public int getIdContrato() {
+    public int getId() {
         return id;
     }
 
-    public void setIdContrato(int idContrato) {
-        this.id = idContrato;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getStatus() {
@@ -89,6 +91,14 @@ public class Contratos {
         this.dataEncerramento = dataEncerramento;
     }
     
+	public Funcionarios getFuncionarios() {
+		return funcionarios;
+	}
+
+	public void setFuncionarios(Funcionarios funcionarios) {
+		this.funcionarios = funcionarios;
+	}
+    
 	public Cargo getCargo() {
 		return cargo;
 	}
@@ -105,15 +115,19 @@ public class Contratos {
 		this.empresa = empresa;
 	}
 
-    @Override
-    public String toString() {
-        return "Contrato{" +
-                "idContrato=" + id+
-                ", status=" + status +
-                ", matricula='" + matricula + '\'' +
-                ", dataInicio=" + dataInicio +
-                ", dataEncerramento=" + dataEncerramento +
-                '}';
-    }
+	@Override
+	public String toString() {
+	    return "Contrato{" +
+	            "id=" + id +
+	            ", status=" + status +
+	            ", matricula='" + matricula + '\'' +
+	            ", dataInicio=" + dataInicio +
+	            ", dataEncerramento=" + dataEncerramento +
+	            ", funcionarios=" + funcionarios +
+	            ", cargo=" + cargo +
+	            ", empresa=" + empresa +
+	            '}';
+	}
+
 
 }

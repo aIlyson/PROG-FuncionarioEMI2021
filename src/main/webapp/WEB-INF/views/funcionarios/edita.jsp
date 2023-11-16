@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="security"%>
 <!DOCTYPE html>
@@ -27,24 +28,36 @@
 
 			<div class="form-group">
 				<label for="nome">Nome:<span class="text-danger">*</span></label> <input
-					type="text" id="nome" name="nome" maxlength="150" pattern="[A-Za-z\s]+"
-					title="Digite seu nome,  por favor, coloque sem acentuação" required class="form-control"
-					value="${funcionarios.nome}">
+					type="text" id="nome" name="nome" maxlength="150"
+					pattern="[A-Za-z\s]+"
+					title="Digite seu nome,  por favor, coloque sem acentuação"
+					required class="form-control" value="${funcionarios.nome}">
 			</div>
 
 			<div class="form-group">
 				<label for="dataNascimento" class="d-block mt-3">Data de
 					Nascimento:<span class="text-danger">*</span>
-				</label> <input type="text" id="dataNascimento" name="dataNascimento"
+				</label>
+				<fmt:formatDate pattern="dd/MM/yyyy"
+					value="${funcionarios.dataNascimento}" var="dataFormatada" />
+				<input type="text" id="dataNascimento" name="dataNascimento"
 					pattern="\d{1,2}/\d{1,2}/\d{4}"
 					title="Formato inválido. Use dd/MM/yyyy" required
-					class="form-control" value="${funcionarios.dataNascimento}">
+					class="form-control" value="${dataFormatada}">
 			</div>
 
 			<div class="form-group">
 				<label for="email">E-mail:</label> <input type="email" id="email"
 					name="email" required class="form-control"
 					value="${funcionarios.email}">
+			</div>
+
+			<div class="form-group">
+				<label for="status">Status:<span class="text-danger">*</span></label>
+				<select id="status" name="status" required class="form-control">
+					<option value="true">Ativo</option>
+					<option value="false">Inativo</option>
+				</select>
 			</div>
 
 			<security:csrfInput />
