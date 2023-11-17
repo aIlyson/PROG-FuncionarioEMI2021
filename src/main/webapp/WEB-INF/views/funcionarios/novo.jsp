@@ -25,7 +25,8 @@
 			<div class="form bg-white p-4 shadow">
 				<div class="row">
 					<div class="col-md-9">
-						<form action="adiciona" method="POST">
+						<form action="adiciona" method="POST"
+							onsubmit="return validarDataNascimento()">
 							<div class="mt-4 mb-4">
 								<h1>Adicionar Funcionário</h1>
 								<p>Cadastrar aqui novos funcionários.</p>
@@ -41,14 +42,12 @@
 							</div>
 
 							<div class="form-group">
-								<label for="dataNascimento" class="d-block mt-3">Data de
-									Nascimento:<span class="text-danger">*</span>
-								</label> <input type="text" id="dataNascimento" name="dataNascimento"
-									pattern="\d{1,2}/\d{1,2}/\d{4}"
-									title="Formato inválido. Use dd/MM/yyyy" required
+								<label for="dataNascimento">Data de Nascimento:<span
+									class="text-danger">*</span></label> <input type="text"
+									id="dataNascimento" name="dataNascimento" required
 									class="form-control">
 							</div>
-							
+
 							<div class="form-group">
 								<label for="endereco.id">Endereço:<span
 									class="text-danger">*</span></label>
@@ -125,6 +124,7 @@
 							<div class="form-group">
 								<label for="status">Status:<span class="text-danger">*</span></label>
 								<select id="status" name="status" required class="form-control">
+									<option selected disabled>Selecione um status</option>
 									<option value="true">Ativo</option>
 									<option value="false">Inativo</option>
 								</select>
@@ -153,11 +153,4 @@
 	src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<script>
-	$(document).ready(function() {
-		$('#dataNascimento').mask('00/00/0000', {
-			placeholder : '__/__/____'
-		});
-	});
-</script>
+<script type="text/javascript" src="../resources/js/validatedate.js"></script>

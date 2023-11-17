@@ -105,8 +105,8 @@
 						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> Contratos </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="<c:url value="/" />">Admitir Contratos</a> <a
-								class="dropdown-item" href="<c:url value="/" />">Visualizar Contratos</a> <a
+							<a class="dropdown-item" href="<c:url value="/contratos/novo" />">Formalizar Contratos</a> <a
+								class="dropdown-item" href="<c:url value="/contratos/lista" />">Monitorar Contratos</a> <a
 								class="dropdown-item" href="<c:url value="/" />">Alterar Contratos</a>
 						</div></li>
 					<li class="nav-item dropdown"><a
