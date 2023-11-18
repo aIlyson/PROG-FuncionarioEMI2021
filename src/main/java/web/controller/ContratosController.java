@@ -97,7 +97,6 @@ public class ContratosController {
 	@RequestMapping(value = "/altera", method = RequestMethod.POST)
 	public String altera(@Valid Contratos contratos, BindingResult result) {
 		if (result.hasErrors()) {
-			System.out.println(result);
 			return "redirect:edita?id=" + contratos.getId();
 		}
 

@@ -29,7 +29,7 @@
 							onsubmit="return validarDataNascimento()">
 							<div class="mt-4 mb-4">
 								<h1>Adicionar Funcionário</h1>
-								<p>Cadastrar aqui novos funcionários.</p>
+								<p>Para cadastrar um novo funcionário, informe seu dados aqui.</p>
 							</div>
 
 
@@ -129,6 +129,7 @@
 									<option value="false">Inativo</option>
 								</select>
 							</div>
+
 							<button class="btn btn-primary" type="submit">Criar</button>
 						</form>
 					</div>

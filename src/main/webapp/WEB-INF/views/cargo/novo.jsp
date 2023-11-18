@@ -27,7 +27,7 @@
 						<form action="adiciona" method="POST">
 							<div class="mt-4 mb-4">
 								<h1>Adicionar Cargos</h1>
-								<p>Cadastrar aqui novos cargos.</p>
+								<p>Para cadastrar um novo cargo, informe o nome e salário aqui.</p>
 							</div>
 
 							<div class="form-group">

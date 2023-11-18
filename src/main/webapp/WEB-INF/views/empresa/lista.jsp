@@ -50,43 +50,48 @@
 					<td class="coluna align-middle">${empresa.estado}</td>
 					<td class="coluna align-middle">${empresa.cidade}</td>
 					<td class="coluna align-middle">${empresa.email}</td>
-					<td>
-						<!-- Exibir --> <a
-						href="<c:url value="/empresa/exibe?id=${empresa.id}"/>"
-						class="btn btn-secondary" data-toggle="tooltip"
-						data-bs-placement="bottom" title="Exibir"> <i
-							class="fas fa-solid fa-eye text-white"></i>
-					</a> <!-- Editar --> <a
-						href="<c:url value='/empresa/edita?id=${empresa.id}' />"
-						class="btn btn-primary" data-toggle="tooltip"
-						data-placement="bottom" title="Editar"> <i
-							class="fas fa-solid fa-pencil text-white"></i>
-					</a> <!-- Excluir --> <a href="#" class="btn btn-danger"
-						data-toggle="modal" data-target="#modal${empresa.id}"
-						data-placement="bottom" title="Excluir"> <i
-							class="fas fa-solid fa-trash text-white"></i>
-					</a> <!-- Modal -->
-						<div id="modal${empresa.id}" class="modal fade" tabindex="-1"
-							role="dialog" aria-labelledby="exampleModalLabel"
-							aria-hidden="true">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h5 class="modal-title" id="exampleModalLabel">Exclusão
-											da empresa cadastrada</h5>
-										<button type="button" class="close" data-dismiss="modal"
-											aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-									</div>
-									<div class="modal-body">
-										<p>Deseja realmente excluir essa empresa?</p>
-									</div>
-									<div class="modal-footer">
-										<a href="<c:url value='/empresa/remove?id=${empresa.id}' />"
-											class="btn btn-danger">Excluir</a>
-										<button type="button" class="btn btn-secondary"
-											data-dismiss="modal">Fechar</button>
+					<td class="coluna align-middle">
+						<div class="d-flex justify-content-center">
+							<!-- Exibir -->
+							<a href="<c:url value="/empresa/exibe?id=${empresa.id}"/>"
+								class="btn btn-secondary" data-toggle="tooltip"
+								data-bs-placement="bottom" title="Exibir"> <i
+								class="fas fa-solid fa-eye text-white"></i>
+							</a>
+							<!-- Editar -->
+							<a href="<c:url value='/empresa/edita?id=${empresa.id}' />"
+								class="btn btn-primary" data-toggle="tooltip"
+								data-placement="bottom" title="Editar"> <i
+								class="fas fa-solid fa-pencil text-white"></i>
+							</a>
+							<!-- Excluir -->
+							<a href="#" class="btn btn-danger" data-toggle="modal"
+								data-target="#modal${empresa.id}" data-placement="bottom"
+								title="Excluir"> <i class="fas fa-solid fa-trash text-white"></i>
+							</a>
+							<!-- Modal -->
+							<div id="modal${empresa.id}" class="modal fade" tabindex="-1"
+								role="dialog" aria-labelledby="exampleModalLabel"
+								aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">Exclusão
+												da empresa cadastrada</h5>
+											<button type="button" class="close" data-dismiss="modal"
+												aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<p>Deseja realmente excluir essa empresa?</p>
+										</div>
+										<div class="modal-footer">
+											<a href="<c:url value='/empresa/remove?id=${empresa.id}' />"
+												class="btn btn-danger">Excluir</a>
+											<button type="button" class="btn btn-secondary"
+												data-dismiss="modal">Fechar</button>
+										</div>
 									</div>
 								</div>
 							</div>

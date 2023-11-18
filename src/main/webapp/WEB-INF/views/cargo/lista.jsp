@@ -68,7 +68,7 @@
 										</button>
 									</div>
 									<div class="modal-body">
-										<p>Deseja realmente excluir o cargo?</p>
+										<p>Deseja realmente excluir esse cargo?</p>
 									</div>
 									<div class="modal-footer">
 										<a href="<c:url value='/cargo/remove?id=${cargo.id}' />"

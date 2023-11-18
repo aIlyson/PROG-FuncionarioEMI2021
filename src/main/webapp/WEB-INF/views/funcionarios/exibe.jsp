@@ -81,14 +81,14 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">Exclusão do
-						cargo</h5>
+						funcionário</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<p>Deseja realmente excluir o funcionário?</p>
+					<p>Deseja realmente excluir esse funcionário?</p>
 				</div>
 				<div class="modal-footer">
 					<a

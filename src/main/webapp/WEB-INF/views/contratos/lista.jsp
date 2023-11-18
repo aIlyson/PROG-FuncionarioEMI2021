@@ -78,8 +78,23 @@
 							var="dataFormatada" /> ${dataFormatada}</td>
 					<td class="coluna align-middle"><span
 						class="text-white text-sm w-1/3 pb-1 font-semibold px-2 rounded-full"
-						style="background-color: ${contratos.status ? '#00cc66' : '#ff6666'};">
-							${contratos.status ? 'Ativo' : 'Inativo'} </span></td>
+						style="background-color: 
+            ${contratos.status eq 'Ativo' ? '#00cc66' 
+            : contratos.status eq 'Inativo' ? '#ff6666' 
+            : contratos.status eq 'Vencido' ? '#8B4513' 
+            : contratos.status eq 'Arquivado' ? '#800000' 
+            : contratos.status eq 'Rescindido' ? '#87CE0B' 
+            : contratos.status eq 'Renovado' ? '#87CE0B' 
+            : ''};">
+							${contratos.status eq 'Ativo' ? 'Ativo' 
+          : contratos.status eq 'Inativo' ? 'Inativo' 
+          : contratos.status eq 'Vencido' ? 'Vencido' 
+          : contratos.status eq 'Arquivado' ? 'Arquivado' 
+          : contratos.status eq 'Rescindido' ? 'Rescindido' 
+          : contratos.status eq 'Renovado' ? 'Renovado' 
+          : ''}
+					</span></td>
+
 					<td class="coluna align-middle">
 						<div class="d-flex justify-content-center">
 							<!-- Exibir -->

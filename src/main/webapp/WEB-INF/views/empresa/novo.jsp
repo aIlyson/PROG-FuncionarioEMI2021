@@ -28,7 +28,7 @@
 						<form action="adiciona" method="POST">
 							<div class="mt-4 mb-4">
 								<h1>Adicionar Empresa</h1>
-								<p>Cadastrar aqui uma nova empresa.</p>
+								<p>Para cadastrar uma nova empresa, informe seu CNPJ aqui.</p>
 							</div>
 
 							<div id="mensagem-erro" class="alert alert-danger"

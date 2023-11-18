@@ -74,7 +74,7 @@
 										</button>
 									</div>
 									<div class="modal-body">
-										<p>Deseja realmente excluir o endereço?</p>
+										<p>Deseja realmente excluir esse endereço?</p>
 									</div>
 									<div class="modal-footer">
 										<a href="<c:url value='/endereco/remove?id=${endereco.id}' />"

@@ -73,7 +73,7 @@
 		</a>
 	</div>
 	<!-- Modal -->
-	<div id="modal${cargo.id}" class="modal fade" tabindex="-1"
+	<div id="modal${empresa.id}" class="modal fade" tabindex="-1"
 		role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">

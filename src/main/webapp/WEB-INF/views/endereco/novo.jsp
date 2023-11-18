@@ -48,7 +48,7 @@
 						<form action="adiciona" method="POST">
 							<div class="mt-4 mb-4">
 								<h1>Adicionar Endereços</h1>
-								<p>Cadastrar aqui novos endereços.</p>
+								<p>Para cadastrar um novo endereço, informe seu CEP aqui.</p>
 							</div>
 
 							<div id="mensagem-erro" class="alert alert-danger"

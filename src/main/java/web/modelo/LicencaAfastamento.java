@@ -18,7 +18,7 @@ public class LicencaAfastamento {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idLicenca;
+    private int id;
 	
 	@NotNull
     private String tipoLicenca;
@@ -37,11 +37,11 @@ public class LicencaAfastamento {
 	private Funcionarios funcionarios;
 
     public int getIdLicenca() {
-        return idLicenca;
+        return id;
     }
 
-    public void setIdLicenca(int idLicenca) {
-        this.idLicenca = idLicenca;
+    public void setIdLicenca(int id) {
+        this.id = id;
     }
 
     public String getTipoLicenca() {
@@ -79,7 +79,7 @@ public class LicencaAfastamento {
     @Override
     public String toString() {
         return "Licenca{" +
-                "idLicenca=" + idLicenca +
+                "id=" + id +
                 ", tipoLicenca='" + tipoLicenca + '\'' +
                 ", dataInicio=" + dataInicio +
                 ", dataFim=" + dataFim +

@@ -23,7 +23,7 @@ public class Contratos {
     private int id;
 	
 	@NotNull
-    private boolean status;
+    private String status;
     
 	@NotNull
 	@Column(unique = true)
@@ -59,11 +59,11 @@ public class Contratos {
         this.id = id;
     }
 
-    public boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

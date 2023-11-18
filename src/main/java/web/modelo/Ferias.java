@@ -18,7 +18,7 @@ public class Ferias {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idFerias;
+    private int id;
     
 	@NotNull
 	@Temporal(TemporalType.DATE)
@@ -33,12 +33,12 @@ public class Ferias {
 	@ManyToOne
 	private Contratos contratos;
 
-    public int getIdFerias() {
-        return idFerias;
+    public int getId() {
+        return id;
     }
 
-    public void setIdFerias(int idFerias) {
-        this.idFerias = idFerias;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Date getDataInicio() {
@@ -68,7 +68,7 @@ public class Ferias {
     @Override
     public String toString() {
         return "Ferias{" +
-                "idFerias=" + idFerias +
+                "id=" + id +
                 ", dataInicio=" + dataInicio +
                 ", dataEncerramento=" + dataEncerramento +
                 '}';

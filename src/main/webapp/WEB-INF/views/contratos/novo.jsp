@@ -30,7 +30,7 @@
 							onsubmit="return validarDatas()">
 							<div class="mt-4 mb-4">
 								<h1>Formalize Contrato</h1>
-								<p>Crie aqui novos contratos.</p>
+								<p>Crie novos contratos aqui.</p>
 							</div>
 
 							<div class="form-group">
@@ -99,12 +99,8 @@
 								<label for="status">Status:<span class="text-danger">*</span></label>
 								<select id="status" name="status" required class="form-control">
 									<option selected disabled>Selecione um status</option>
-									<option value="true">Ativo</option>
-									<option value="false">Inativo</option>
-									<option class="d-none" value="vencido">Vencido</option>
-									<option class="d-none" value="arquivado">Arquivado</option>
-									<option class="d-none" value="rescindido">Rescindido</option>
-									<option class="d-none" value="renovado">Renovado</option>
+									<option value="Ativo">Ativo</option>
+									<option value="Inativo">Inativo</option>
 								</select>
 							</div>
 
