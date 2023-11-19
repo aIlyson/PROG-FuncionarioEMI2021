@@ -29,7 +29,8 @@
 							onsubmit="return validarDataNascimento()">
 							<div class="mt-4 mb-4">
 								<h1>Adicionar Funcionário</h1>
-								<p>Para cadastrar um novo funcionário, informe seu dados aqui.</p>
+								<p>Para cadastrar um novo funcionário, informe seu dados
+									aqui.</p>
 							</div>
 
 
@@ -123,11 +124,13 @@
 
 							<div class="form-group">
 								<label for="status">Status:<span class="text-danger">*</span></label>
-								<select id="status" name="status" required class="form-control">
-									<option selected disabled>Selecione um status</option>
-									<option value="true">Ativo</option>
-									<option value="false">Inativo</option>
-								</select>
+								<div class="input-group">
+									<select id="status" name="status" required class="form-select">
+										<option selected disabled>Selecione um status</option>
+										<option value="true">Ativo</option>
+										<option value="false">Inativo</option>
+									</select>
+								</div>
 							</div>
 
 							<button class="btn btn-primary" type="submit">Criar</button>

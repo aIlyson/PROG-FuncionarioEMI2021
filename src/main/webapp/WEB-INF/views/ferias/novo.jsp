@@ -1,3 +1,6 @@
+
+<!-- Tenho que adicionar input com detalhes do contrato adicionado -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -29,7 +32,7 @@
 							onsubmit="return validarDatas()">
 							<div class="mt-4 mb-4">
 								<h1>Nova Férias</h1>
-								<p>Adicione aqui novas datas de férias.</p>
+								<p>Adicione novas datas de férias aqui.</p>
 							</div>
 
 							<div class="form-group">

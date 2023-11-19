@@ -18,6 +18,7 @@
 
 <div class="container mt-5">
 	<form action="altera" method="POST"
+		onsubmit="return validarDataNascimento()"
 		class="bg-white p-4 shadow-sm rounded">
 		<fieldset>
 			<legend>Alterar funcionário:</legend>
@@ -54,7 +55,7 @@
 
 			<div class="form-group">
 				<label for="status">Status:<span class="text-danger">*</span></label>
-				<select id="status" name="status" required class="form-control">
+				<select id="status" name="status" required class="form-select">
 					<option value="true">Ativo</option>
 					<option value="false">Inativo</option>
 				</select>
@@ -74,6 +75,12 @@
 		</fieldset>
 	</form>
 </div>
+
+<c:if test="${not empty mensagem}">
+	<script>
+		alert("${mensagem}");
+	</script>
+</c:if>
 
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>

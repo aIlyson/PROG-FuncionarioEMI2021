@@ -22,7 +22,6 @@
 			<legend>Alterar dados da empresa:</legend>
 			<input type="hidden" name="id" value="${empresa.id}" required>
 
-
 			<div class="form-group">
 				<label for="razao">Razão social:<span class="text-danger">*</span></label><br />
 				<input id="razao" type="text" name="razao" maxlength="150"

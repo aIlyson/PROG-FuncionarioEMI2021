@@ -44,7 +44,6 @@
 			<th>Email</th>
 			<td class="coluna align-middle">${funcionarios.email}</td>
 		</tr>
-
 		<tr>
 			<th>Endereço</th>
 			<td class="coluna align-middle">

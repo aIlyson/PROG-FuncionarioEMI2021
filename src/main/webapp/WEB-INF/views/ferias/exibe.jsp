@@ -63,9 +63,8 @@
 					value="${(encerramentoTotal - inicioTotal) / (1000 * 60 * 60 * 24)}" />
 				<fmt:formatNumber value="${totalDias}" type="number" pattern="#,##0"
 					var="totalDiasFormatado" />
-				<p>${totalDiasFormatado}_Dias</p></td>
+				<p>${totalDiasFormatado}&nbsp;Dias</p></td>
 		</tr>
-
 
 	</table>
 

@@ -16,6 +16,8 @@
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/index.css" />">
 <link>
+    <link rel="icon" type="image/png" href="<c:url value="/resources/imagens/1.png" />" sizes="82x82">
+
 <style>
 .background-image {
 	background-size: cover;
@@ -41,6 +43,7 @@
 </head>
 
 <c:import url="componentes/cabecalho.jsp" />
+
 
 <section class="hero-section py-3 py-md-5">
 	<div class="background-image background"></div>
@@ -120,3 +123,10 @@
 
 </body>
 </html>
+
+<!-- 
+   /\_/\
+  ( o.o )
+   > ^ <
+   ~~~~~~~~ Swao
+-->

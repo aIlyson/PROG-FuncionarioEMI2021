@@ -68,6 +68,7 @@
 			<th>Status</th>
 			<td class="coluna align-middle">${contratos.status}</td>
 		</tr>
+		
 	</table>
 
 	<div align="center">

@@ -36,11 +36,11 @@ public class LicencaAfastamento {
 	@ManyToOne
 	private Funcionarios funcionarios;
 
-    public int getIdLicenca() {
+    public int getId() {
         return id;
     }
 
-    public void setIdLicenca(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 

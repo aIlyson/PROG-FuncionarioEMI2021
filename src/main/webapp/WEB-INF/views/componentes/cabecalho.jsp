@@ -10,6 +10,8 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+<link rel="icon" type="image/png"
+	href="<c:url value="/resources/imagens/1.png" />" sizes="82x82">
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/bootstrap.min.css"/>">
 <link rel="stylesheet" type="text/css"
@@ -42,18 +44,18 @@
 						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> Cadastro </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="<c:url value="/empresa/novo" />">Empresa</a>
+							<a class="dropdown-item" href="<c:url value="/empresa/novo" />">Empresas</a>
 							<a class="dropdown-item"
-								href="<c:url value="/funcionarios/novo" />">Funcionario</a> <a
-								class="dropdown-item" href="<c:url value="/cargo/novo" />">Cargo</a>
-							<a class="dropdown-item" href="<c:url value="/endereco/novo" />">Endereço</a>
+								href="<c:url value="/funcionarios/novo" />">Funcionarios</a> <a
+								class="dropdown-item" href="<c:url value="/cargo/novo" />">Cargos</a>
+							<a class="dropdown-item" href="<c:url value="/endereco/novo" />">Endereços</a>
 						</div></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> Contratos </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="<c:url value="/contratos/novo" />">Formalizar
+							<a class="dropdown-item" href="<c:url value="/contratos/novo" />">Elaborar
 								contratos</a> <a class="dropdown-item"
 								href="<c:url value="/contratos/lista" />">Monitorar
 								contratos</a>
@@ -63,26 +65,24 @@
 						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> Férias e Licenças </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="<c:url value="/ferias/novo" />">Nova
+							<a class="dropdown-item" href="<c:url value="/ferias/novo" />">Novas
 								férias</a> <a class="dropdown-item"
-								href="<c:url value="/ferias/lista" />">Supervisionar férias</a>
+								href="<c:url value="/ferias/lista" />">Gerenciar férias</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item"
-								href="<c:url value="/licensaafastamento/novo" />">Novo
-								licença</a> <a class="dropdown-item"
-								href="<c:url value="/licensaafastamento/lista" />">Supervisionar
-								licença</a>
+							<a class="dropdown-item" href="<c:url value="/licenca/novo" />">Novas
+								licenças</a> <a class="dropdown-item"
+								href="<c:url value="/licenca/lista" />">Gerenciar licenças</a>
 						</div></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 						role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> Relatório </a>
+						aria-expanded="false"> Relatórios </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="<c:url value="/empresa/lista" />">Empresa</a>
+							<a class="dropdown-item" href="<c:url value="/empresa/lista" />">Empresas</a>
 							<a class="dropdown-item"
-								href="<c:url value="/funcionarios/lista" />">Funcionario</a> <a
-								class="dropdown-item" href="<c:url value="/cargo/lista" />">Cargo</a>
-							<a class="dropdown-item" href="<c:url value="/endereco/lista" />">Endereço</a>
+								href="<c:url value="/funcionarios/lista" />">Funcionarios</a> <a
+								class="dropdown-item" href="<c:url value="/cargo/lista" />">Cargos</a>
+							<a class="dropdown-item" href="<c:url value="/endereco/lista" />">Endereços</a>
 						</div></li>
 				</ul>
 

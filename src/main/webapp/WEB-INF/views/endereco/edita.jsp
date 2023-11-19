@@ -29,7 +29,6 @@
 				required> <input type="hidden" name="cidade"
 				value="${endereco.cidade}" required>
 
-
 			<div class="form-group">
 				<label for="bairro">Bairro</label> <input type="text" name="bairro"
 					maxlength="30" pattern="[A-Za-z\s]+"
