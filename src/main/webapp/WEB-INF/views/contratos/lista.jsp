@@ -83,7 +83,7 @@
             : contratos.status eq 'Inativo' ? '#ff6666' 
             : contratos.status eq 'Vencido' ? '#8B4513' 
             : contratos.status eq 'Arquivado' ? '#800000' 
-            : contratos.status eq 'Rescindido' ? '#87CE0B' 
+            : contratos.status eq 'Rescindido' ? '#B81414' 
             : contratos.status eq 'Renovado' ? '#87CE0B' 
             : ''};">
 							${contratos.status eq 'Ativo' ? 'Ativo' 

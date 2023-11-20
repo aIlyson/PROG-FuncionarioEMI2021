@@ -16,8 +16,6 @@
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/index.css" />">
 <link>
-    <link rel="icon" type="image/png" href="<c:url value="/resources/imagens/1.png" />" sizes="82x82">
-
 <style>
 .background-image {
 	background-size: cover;
