@@ -39,7 +39,6 @@ public class UserController {
             User newUser = new User();
             newUser.setEmail(email);
             newUser.setSenha(passwordEncoder.encode(senha));
-
             userDAO.adiciona(newUser);
 
             return "login/novo";

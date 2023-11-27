@@ -6,12 +6,15 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import web.modelo.User;
 
 @Repository
-public class UserDAO {
+public class UserDAO implements UserDetailsService{
 
     @PersistenceContext
     private EntityManager manager;
@@ -60,4 +63,10 @@ public class UserDAO {
                 .findFirst()
                 .orElse(null);
     }
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
