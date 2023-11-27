@@ -1,90 +1,68 @@
 package web.modelo;
 
-import java.util.Date;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
-import org.springframework.format.annotation.DateTimeFormat;
+
 
 @Entity
 public class User {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idDependentes;
-	
-	@NotNull
-	@Size(max = 50)
-    private String nome;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @NotNull
+    @Column(unique = true)
+    private String email;
     
 	@NotNull
-	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Date dataNascimento;
+    private String senha;
 	
-	@NotNull
-	@ManyToOne
-	private Funcionarios funcionarios;
+	private String role;
 	
-	@NotNull
-	@ManyToOne
-	private Endereco endereco;
+    public String getRole() {
+		return role;
+	}
 
-    public int getIdDependentes() {
-        return idDependentes;
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public int getId() {
+        return id;
     }
 
-    public void setIdDependentes(int idDependentes) {
-        this.idDependentes = idDependentes;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
     
-	public Funcionarios getFuncionarios() {
-		return funcionarios;
+    public String getEmail() {
+		return email;
 	}
 
-	public void setFuncionarios(Funcionarios funcionarios) {
-		this.funcionarios = funcionarios;
-	}
-	
-	public Endereco getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
     @Override
     public String toString() {
-        return "Dependente{" +
-                "idDependentes=" + idDependentes +
-                ", nome='" + nome + '\'' +
-                ", dataNascimento=" + dataNascimento +
+        return "User{" +
+                "id=" + id +
+                ", senha='" + senha + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
-
 }
+

@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:security="http://www.springframework.org/schema/security"
 	xsi:schemaLocation="
-    http://www.springframework.org/schema/mvc
-    http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context-4.3.xsd
+        http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/tx
-        http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<!-- Pacote base da aplicação WEB -->
+
 	<context:component-scan base-package="web" />
 
+
+
 	<!-- Habilitar anotações no Spring -->
+
 	<mvc:annotation-driven />
 
+
+
 	<!-- Define pagina inicial (ingnora a configuração do web.xml) -->
+
 	<mvc:view-controller path="/" view-name="index" />
 
+
 	<!-- Controle de transações por anotações no Spring -->
+
 	<tx:annotation-driven />
 
 	<!-- Spring tratar arquivos comuns CSS, JS, Imagens -->
+
 	<mvc:default-servlet-handler />
 
 	<!-- JSP na pasta /WEB-INF/views/ -->
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
@@ -37,16 +52,20 @@
 	</bean>
 
 	<!-- dados da conexao -->
+
 	<bean id="mysqlDataSource"
 		class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost/projetoemi_2021" />
+		<property name="url"
+			value="jdbc:mysql://localhost/projetoemi_2021" />
 		<property name="username" value="root" />
-		<property name="password" value="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" />
+		<property name="password"
+			value="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" />
 	</bean>
 
 	<!-- gerenciamento de jpa pelo spring -->
+
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="mysqlDataSource" />
@@ -56,11 +75,14 @@
 		</property>
 	</bean>
 
+
 	<!-- gerenciamento da transação pelo spring -->
+
 	<bean id="transactionManager"
 		class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory"
 			ref="entityManagerFactory" />
 	</bean>
+
 
 </beans>

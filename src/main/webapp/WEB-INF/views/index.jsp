@@ -15,7 +15,7 @@
 	href="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.css">
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/index.css" />">
-<link>
+
 <style>
 .background-image {
 	background-size: cover;

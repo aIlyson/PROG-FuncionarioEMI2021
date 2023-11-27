@@ -47,7 +47,7 @@
 						class="text-white text-sm w-1/3 pb-1 font-semibold px-2 rounded-full"
 						style="background-color: 
             ${licencaafastamento.tipoLicenca eq 'Medica' ? '#2484FF' 
-            : licencaafastamento.tipoLicenca eq 'Maternidade' ? '#D8bBFD8' 
+            : licencaafastamento.tipoLicenca eq 'Maternidade' ? '#2E2E2E' 
             : licencaafastamento.tipoLicenca eq 'Paternidade' ? '#000080' 
             : licencaafastamento.tipoLicenca eq 'Casamento' ? '#E2AFBF' 
             : licencaafastamento.tipoLicenca eq 'Arquivado' ? '#800000' 
