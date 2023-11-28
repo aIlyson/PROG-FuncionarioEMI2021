@@ -19,36 +19,25 @@ import web.modelo.User;
 @RequestMapping("/usuario")
 public class UserController {
 
-    @Autowired
-    private UserDAO userDAO;
-    
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+	@Autowired
+	private UserDAO userDAO;
 
-    @GetMapping("/login")
-    public String showLoginPage() {
-        return "index";
-    }
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
-   
-    @PostMapping("register")
-    public String registerUser(@RequestParam String email, @RequestParam String senha, Model model) {
-      
-    	if (userDAO.buscaPorEmail(email).isEmpty()) {
-        
-            User newUser = new User();
-            newUser.setEmail(email);
-            newUser.setSenha(passwordEncoder.encode(senha));
-            userDAO.adiciona(newUser);
+	@GetMapping("/login")
+	public String showLoginPage() {
+		return "index";
+	}
 
-            return "login/novo";
-        } else {
-            model.addAttribute("error", "E-mail já em uso. Tente outro e-mail.");
-            return "login/novo";
-        }
-        
-        
-    }
+	@PostMapping("register")
+	public String registerUser(@RequestParam String email, @RequestParam String senha, Model model) {
+		User newUser = new User();
+		newUser.setEmail(email);
+		newUser.setSenha(passwordEncoder.encode(senha));
+		userDAO.adiciona(newUser);
+		
+		return "login/novo";
+	}
 
-   
 }

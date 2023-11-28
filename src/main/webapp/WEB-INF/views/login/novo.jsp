@@ -19,16 +19,17 @@
 		<div class="form-container sign-up-container">
 			<form action="usuario/register" method="POST">
 				<h1 class="welcome-ghots">Criar Conta</h1>
-				<input type="email" name="username" placeholder="Digite seu email" />
-				<input type="password" name="password" placeholder="Digite sua senha" />
+				<input type="email" name="email" placeholder="Digite seu email" />
+				<input type="password" name="senha" placeholder="Digite sua senha" />
 				<button type="submit">Registrar</button>
 			</form>
 		</div>
 		<div class="form-container sign-in-container">
 			<form action="<c:url value='/login' />" method="post">
 				<h1>Entrar</h1>
-				<input type="email" name="username" placeholder="E-mail" /> <input
-					type="password" name="password" placeholder="Digite sua senha" />
+				<input type="email" name="username" id="username"
+					placeholder="E-mail" /> <input type="password" name="password"
+					id="password" placeholder="Digite sua senha" />
 				<button>Entrar</button>
 			</form>
 		</div>
@@ -47,6 +48,7 @@
 				</div>
 			</div>
 		</div>
+				
 	</div>
 
 	<script>
@@ -62,3 +64,5 @@
 		container.classList.remove("right-panel-active");
 	});
 	</script>
+	
+	
