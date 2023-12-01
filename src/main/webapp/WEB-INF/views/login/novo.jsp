@@ -27,7 +27,7 @@
 		<div class="form-container sign-in-container">
 			<form action="<c:url value='/login' />" method="post">
 				<h1>Entrar</h1>
-				<input type="email" name="username" id="username"
+				<input  name="username" id="username"
 					placeholder="E-mail" /> <input type="password" name="password"
 					id="password" placeholder="Digite sua senha" />
 				<button>Entrar</button>
@@ -64,5 +64,14 @@
 		container.classList.remove("right-panel-active");
 	});
 	</script>
-	
+
+</body>
+</html>
+
+<!-- 
+   /\_/\
+  ( o.o )
+   > ^ <
+   ~~~~~~~~ Swao
+-->
 	

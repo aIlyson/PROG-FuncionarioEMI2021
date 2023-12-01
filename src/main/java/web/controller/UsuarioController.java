@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import web.dao.UserDAO;
-import web.modelo.User;
+import web.dao.UsuarioDao;
+import web.modelo.Usuario;
 
 @Controller
 @Transactional
 @RequestMapping("/usuario")
-public class UserController {
+public class UsuarioController {
 
 	@Autowired
-	private UserDAO userDAO;
+	private UsuarioDao userDAO;
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -31,11 +31,11 @@ public class UserController {
 	}
 
 	@PostMapping("register")
-	public String registerUser(@RequestParam String email, @RequestParam String senha, Model model) {
-		User newUser = new User();
-		newUser.setEmail(email);
-		newUser.setSenha(passwordEncoder.encode(senha));
-		userDAO.adiciona(newUser);
+	public String registerUsuario(@RequestParam String email, @RequestParam String senha, Model model) {
+		Usuario newUsuario = new Usuario();
+		newUsuario.setEmail(email);
+		newUsuario.setSenha(passwordEncoder.encode(senha));
+		userDAO.adiciona(newUsuario);
 		
 		return "login/novo";
 	}

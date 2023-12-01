@@ -11,14 +11,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import web.dao.UserDAO;
+import web.dao.UsuarioDao;
 
 @Configuration
 @EnableWebSecurity
 public class CustomWebSecurityConfigurerAdapter {
 
     @Autowired
-    UserDAO userDetailsService;
+    UsuarioDao userDetailsService;
 
     @Bean
     protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
@@ -35,7 +35,7 @@ public class CustomWebSecurityConfigurerAdapter {
             .logout()
                 .permitAll()
                 .and()
-            .csrf().disable();  // Disable CSRF temporarily for testing
+            .csrf().disable();  
 
         return http.build();
     }

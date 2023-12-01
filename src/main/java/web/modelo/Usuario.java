@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 
 @Entity
-public class User implements UserDetails{
+public class Usuario implements UserDetails{
     /**
 	 * 
 	 */
