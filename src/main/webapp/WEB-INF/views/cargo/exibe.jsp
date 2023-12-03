@@ -23,7 +23,6 @@
 	</header>
 
 	<!-- Table -->
-
 	<table class="table table-striped table-bordered dt-responsive nowrap">
 		<tr>
 			<th scope="col" width="30%">Id</th>
@@ -78,6 +77,7 @@
 </div>
 
 <c:import url="../componentes/footer.jsp" />
+
 
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

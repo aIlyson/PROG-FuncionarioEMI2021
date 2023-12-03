@@ -17,7 +17,7 @@
 
 
 <div class="container mt-5">
-	<form action="altera" method="POST"
+	<form action="altera" method="POST" onsubmit="return validarDatas()"
 		class="bg-white p-4 shadow-sm rounded">
 		<fieldset>
 			<legend>Alterar férias:</legend>
@@ -32,7 +32,7 @@
 				</label>
 				<fmt:formatDate pattern="dd/MM/yyyy" value="${ferias.dataInicio}"
 					var="dataFormatada" />
-				<input type="text" id="dataInicioFerias" name="dataInicio"
+				<input type="text" id="dataInicio" name="dataInicio"
 					pattern="\d{1,2}/\d{1,2}/\d{4}"
 					title="Formato inválido. Use dd/MM/yyyy" required
 					class="form-control" value="${dataFormatada}">
@@ -44,8 +44,8 @@
 				</label>
 				<fmt:formatDate pattern="dd/MM/yyyy"
 					value="${ferias.dataEncerramento}" var="dataFormatada" />
-				<input type="text" id="dataEncerramentoFerias" name="dataEncerramento"
-					pattern="\d{1,2}/\d{1,2}/\d{4}"
+				<input type="text" id="dataEncerramento"
+					name="dataEncerramento" pattern="\d{1,2}/\d{1,2}/\d{4}"
 					title="Formato inválido. Use dd/MM/yyyy" required
 					class="form-control text-danger" value="${dataFormatada}">
 			</div>
@@ -75,5 +75,3 @@
 
 </body>
 </html>
-
-

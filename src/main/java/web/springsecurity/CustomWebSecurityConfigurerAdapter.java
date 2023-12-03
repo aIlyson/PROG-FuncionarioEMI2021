@@ -24,7 +24,7 @@ public class CustomWebSecurityConfigurerAdapter {
     protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/", "/home", "/resources/css/**", "/login").permitAll()
+                .antMatchers("/", "/home", "/resources/css/**", "/resources/js/**", "/login").permitAll()
                 .antMatchers(HttpMethod.POST, "/usuario/register").permitAll()
                 .anyRequest().authenticated()
                 .and()

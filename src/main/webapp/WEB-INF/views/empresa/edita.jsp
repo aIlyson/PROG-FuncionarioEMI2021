@@ -21,6 +21,10 @@
 		<fieldset>
 			<legend>Alterar dados da empresa:</legend>
 			<input type="hidden" name="id" value="${empresa.id}" required>
+			<input type="hidden" name="cnpj" value="${empresa.cnpj}" required>
+			<input type="hidden" name="cep" value="${empresa.cep}" required>
+			<input type="hidden" name="estado" value="${empresa.estado}" required>
+			<input type="hidden" name="cidade" value="${empresa.cidade}" required>
 
 			<div class="form-group">
 				<label for="razao">Razão social:<span class="text-danger">*</span></label><br />
@@ -60,5 +64,3 @@
 
 </body>
 </html>
-
-

@@ -46,11 +46,11 @@
 					<td class="coluna align-middle"><span
 						class="text-white text-sm w-1/3 pb-1 font-semibold px-2 rounded-full"
 						style="background-color: 
-            ${licencaafastamento.tipoLicenca eq 'Medica' ? '#2484FF' 
-            : licencaafastamento.tipoLicenca eq 'Maternidade' ? '#2E2E2E' 
+            ${licencaafastamento.tipoLicenca eq 'Medica' ? '#003366' 
+            : licencaafastamento.tipoLicenca eq 'Maternidade' ? '#8E90B7' 
             : licencaafastamento.tipoLicenca eq 'Paternidade' ? '#000080' 
             : licencaafastamento.tipoLicenca eq 'Casamento' ? '#E2AFBF' 
-            : licencaafastamento.tipoLicenca eq 'Arquivado' ? '#800000' 
+            : licencaafastamento.tipoLicenca eq 'Acidente' ? '#595959' 
             : licencaafastamento.tipoLicenca eq 'Militar' ? '#003424' 
             : licencaafastamento.tipoLicenca eq 'Luto' ? '#111111' 
             : ''};">
@@ -105,7 +105,7 @@
 									</div>
 									<div class="modal-body">
 										<p>Deseja realmente excluir a licença
-											${licencaafastamento.tipoLicenca}?</p>
+											${licencaafastamento.tipoLicenca} de ${funcionario.nome}?</p>
 									</div>
 									<div class="modal-footer">
 										<a

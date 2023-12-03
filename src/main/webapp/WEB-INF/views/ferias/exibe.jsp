@@ -24,7 +24,6 @@
 	</header>
 
 	<!-- Table -->
-
 	<table class="table table-striped table-bordered dt-responsive nowrap">
 		<tr>
 			<th scope="col" width="30%">Id</th>

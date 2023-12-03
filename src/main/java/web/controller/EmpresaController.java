@@ -64,6 +64,7 @@ public class EmpresaController {
 	@RequestMapping(value = "/altera", method = RequestMethod.POST)
 	public String altera(@Valid Empresa empresa, BindingResult result) {
 	    if (result.hasErrors()) {
+	    	System.out.println(result);
 	        return "redirect:edita?id=" + empresa.getId();
 	    }
 

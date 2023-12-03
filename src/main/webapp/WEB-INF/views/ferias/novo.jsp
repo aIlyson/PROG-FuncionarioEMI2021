@@ -36,13 +36,13 @@
 							</div>
 
 							<div class="form-group">
-								<label for="empresa">Contrato:<span class="text-danger">*</span></label>
+								<label for="empresa">Contrato do funcionário:<span class="text-danger">*</span></label>
 								<div class="input-group">
 									<select id="contratos" name="contratos.id" required
 										class="form-select">
 										<option selected disabled>Selecione um contrato</option>
 										<c:forEach var="contratos" items="${contratos}">
-											<option value="${contratos.id}">${contratos.matricula}</option>
+											<option value="${contratos.id}">${contratos.funcionarios.nome}</option>
 										</c:forEach>
 									</select>
 								</div>

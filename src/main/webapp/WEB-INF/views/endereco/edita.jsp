@@ -30,15 +30,16 @@
 				value="${endereco.cidade}" required>
 
 			<div class="form-group">
-				<label for="bairro">Bairro</label> <input type="text" name="bairro"
-					maxlength="30" pattern="[A-Za-z\s]+"
+				<label for="bairro">Bairro<span class="text-danger">*</span></label>
+				<input type="text" name="bairro" maxlength="30"
+					pattern="[A-Za-z\s]+"
 					title="Digite seu bairro,  por favor, coloque sem acentuação"
 					required class="form-control" value="${endereco.bairro}">
 			</div>
 
 			<div class="form-group">
-				<label for="rua">Rua</label> <input type="text" name="rua"
-					maxlength="30" pattern="[A-Za-z0-9\s]+"
+				<label for="rua">Rua<span class="text-danger">*</span></label> <input
+					type="text" name="rua" maxlength="30" pattern="[A-Za-z0-9\s]+"
 					title="Digite sua rua, por favor, coloque sem acentuação" required
 					class="form-control" value="${endereco.rua}">
 			</div>
@@ -68,5 +69,3 @@
 
 </body>
 </html>
-
-
