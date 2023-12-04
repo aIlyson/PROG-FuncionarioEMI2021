@@ -10,6 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login</title>
+<link rel="icon" type="image/png"
+	href="<c:url value="/resources/imagens/1.png" />" sizes="82x82">
 <link rel="stylesheet" type="text/css"
 	href="<c:url value="/resources/css/bootstrap.min.css"/>">
 <link rel="stylesheet" type="text/css"

@@ -17,7 +17,7 @@
 <c:import url="../componentes/cabecalho.jsp" />
 
 
-<div class="container mt-5" style="margin-bottom: 16em;">
+<div class="container mt-5" style="margin-bottom: 13em;">
 	<header>
 		<h1>Dados do cargo</h1>
 	</header>
@@ -31,6 +31,13 @@
 		<tr>
 			<th>Nome</th>
 			<td class="coluna align-middle">${cargo.nome}</td>
+		</tr>
+		<tr>
+			<th>Salário</th>
+			<td class="coluna align-middle">
+					<fmt:formatNumber value="${cargo.salario}" type="currency"
+						currencyCode="BRL" currencySymbol="R$ " />
+				</td>
 		</tr>
 	</table>
 	<div align="center">

@@ -20,7 +20,38 @@
 	<form action="altera" method="POST" onsubmit="return validarDatas()"
 		class="bg-white p-4 shadow-sm rounded">
 		<fieldset>
-			<legend>Alterar dados do contrato:</legend>
+			<legend class="d-flex justify-content-between align-items-center">
+				Alterar dados do contrato:
+				<button type="button" class="btn btn-outline-warning"
+					data-toggle="modal" data-target="#confirmarArquivamentoModal">
+					<span class="fas fa-archive"></span> Arquivar Contrato
+				</button>
+			</legend>
+			<!-- Modal -->
+			<div class="modal fade" id="confirmarArquivamentoModal" tabindex="-1"
+				role="dialog" aria-labelledby="confirmarArquivamentoModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="confirmarArquivamentoModalLabel">Arquivar
+								Contrato</h5>
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">Tem certeza de que deseja arquivar
+							este contrato?</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Cancelar</button>
+							<button type="button" class="btn btn-warning"
+								onclick="arquivarContrato()">Arquivar Contrato</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<input type="hidden" name="id" value="${contratos.id}" required>
 			<input type="hidden" name="cargo.id" value="${contratos.cargo.id}"
@@ -46,9 +77,9 @@
 				<fmt:formatDate pattern="dd/MM/yyyy" value="${contratos.dataInicio}"
 					var="dataFormatada" />
 				<input type="text" id="dataInicio" name="dataInicio"
-					pattern="\d{1,2}/\d{1,2}/\d{4}"
-					title="Formato inválido. Use dd/MM/yyyy" required
-					class="form-control" value="${dataFormatada}">
+					pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(2000|20[0-2][0-9]|2040)$"
+					title="Formato inválido. Insira entre 01/01/2000 e 31/12/2040"
+					required class="form-control" value="${dataFormatada}">
 			</div>
 
 			<div class="form-group">
@@ -58,21 +89,27 @@
 				<fmt:formatDate pattern="dd/MM/yyyy"
 					value="${contratos.dataEncerramento}" var="dataFormatada" />
 				<input type="text" id="dataEncerramento" name="dataEncerramento"
-					pattern="\d{1,2}/\d{1,2}/\d{4}"
-					title="Formato inválido. Use dd/MM/yyyy" required
-					class="form-control text-danger" value="${dataFormatada}">
+					pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(2000|20[0-2][0-9]|2040)$"
+					title="Formato inválido. Insira entre 01/01/2000 e 31/12/2040"
+					required class="form-control text-danger" value="${dataFormatada}"
+					onchange="verificarRenovacao()">
 			</div>
 
 			<div class="form-group">
 				<label for="status">Status:<span class="text-danger">*</span></label>
 				<select id="status" name="status" required class="form-select">
-					<option selected disabled>Selecione um status</option>
-					<option value="Ativo">Ativo</option>
-					<option value="Inativo">Inativo</option>
-					<option value="Vencido">Vencido</option>
-					<option value="Arquivado">Arquivado</option>
-					<option value="Rescindido">Rescindido</option>
-					<option value="Renovado">Renovado</option>
+					<option value="Ativo"
+						<c:if test="${contratos.status eq 'Ativo'}">selected</c:if>>Ativo</option>
+					<option value="Inativo"
+						<c:if test="${contratos.status eq 'Inativo'}">selected</c:if>>Inativo</option>
+					<option value="Renovado"
+						<c:if test="${contratos.status eq 'Renovado'}">selected</c:if>>Renovado</option>
+					<option value="Vencido"
+						<c:if test="${contratos.status eq 'Vencido'}">selected</c:if>>Vencido</option>
+					<option value="Rescindido"
+						<c:if test="${contratos.status eq 'Rescindido'}">selected</c:if>>Rescindido</option>
+					<option value="Arquivado"
+						<c:if test="${contratos.status eq 'Arquivado'}">selected</c:if>>Arquivado</option>
 				</select>
 			</div>
 
@@ -98,11 +135,7 @@
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/validatedate.js"></script>
-<script>
-	$(document).ready(function() {
-		$('#matricula').mask('999999999-9');
-	});
-</script>
+<script type="text/javascript" src="../resources/js/contratos.js"></script>
 
 </body>
 </html>

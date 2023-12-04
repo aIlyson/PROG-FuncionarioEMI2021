@@ -50,15 +50,26 @@
 
 							<div class="form-group">
 								<label for="dataInicio">Data Início:<span
-									class="text-danger">*</span></label> <input type="text" id="dataInicio"
-									name="dataInicio" required class="form-control">
+									class="text-danger">*</span></label>
+								<div class="input-group">
+									<input type="text" id="dataInicio" name="dataInicio"
+										pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(2000|20[0-2][0-9]|2040)$"
+										title="Formato inválido. Insira entre 01/01/2000 e 31/12/2040"
+										required class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-secondary" type="button" id="picker">Inserir
+											data atual</button>
+									</div>
+								</div>
 							</div>
 
 							<div class="form-group">
 								<label for="dataFim">Data Encerramento:<span
 									class="text-danger">*</span></label> <input type="text"
-									id="dataEncerramento" name="dataFim" required
-									class="form-control">
+									id="dataEncerramento" name="dataFim"
+									pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(2000|20[0-2][0-9]|2040)$"
+									title="Formato inválido. Insira entre 01/01/2000 e 31/12/2040"
+									required class="form-control">
 							</div>
 
 							<div class="form-group">
@@ -80,7 +91,6 @@
 									</select>
 								</div>
 							</div>
-
 
 							<button class="btn btn-primary" type="submit">Criar</button>
 						</form>
@@ -106,3 +116,4 @@
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/validatedate.js"></script>
+<script type="text/javascript" src="../resources/js/datepicker.js"></script>

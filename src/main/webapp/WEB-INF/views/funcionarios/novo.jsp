@@ -41,12 +41,13 @@
 									title="Digite seu nome,  por favor, coloque sem acentuação"
 									required class="form-control">
 							</div>
-
 							<div class="form-group">
 								<label for="dataNascimento">Data de Nascimento:<span
 									class="text-danger">*</span></label> <input type="text"
 									id="dataNascimento" name="dataNascimento" required
-									class="form-control">
+									class="form-control"
+									pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(19[5-9][0-9]|200[0-9])$"
+									title="Formato inválido. Insira entre 01/01/1950 e 31/12/2009">
 							</div>
 
 							<div class="form-group">

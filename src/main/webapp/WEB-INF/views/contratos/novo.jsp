@@ -74,25 +74,41 @@
 
 							<div class="form-group">
 								<label for="matricula">Matrícula:<span
-									class="text-danger">*</span></label> <input type="text" id="matricula"
-									name="matricula" class="form-control" required
-									pattern="\d{9}-\d" maxlength="11"
-									title="Digite 9 dígitos seguidos por um hífen e um dígito. Exemplo: 123456789-0">
+									class="text-danger">*</span></label>
+								<div class="input-group">
+									<input type="text" id="matricula" name="matricula"
+										class="form-control" required pattern="\d{9}-\d"
+										maxlength="11"
+										title="Digite 9 dígitos seguidos por um hífen e um dígito. Exemplo: 123456789-0">
+									<div class="input-group-append">
+										<button class="btn btn-secondary" type="button" id="gerador">Gerar</button>
+									</div>
+								</div>
 								<small>Exemplo: 123456789-0</small>
-
 							</div>
 
 							<div class="form-group">
 								<label for="dataInicio">Data Início:<span
-									class="text-danger">*</span></label> <input type="text" id="dataInicio"
-									name="dataInicio" required class="form-control">
+									class="text-danger">*</span></label>
+								<div class="input-group">
+									<input type="text" id="dataInicio" name="dataInicio"
+										pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(2000|20[0-2][0-9]|2030)$"
+										title="Formato inválido. Insira entre 01/01/2000 e 31/12/2030"
+										required class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-secondary" type="button" id="picker">Inserir
+											data atual</button>
+									</div>
+								</div>
 							</div>
 
 							<div class="form-group">
 								<label for="dataEncerramento">Data Encerramento:<span
 									class="text-danger">*</span></label> <input type="text"
-									id="dataEncerramento" name="dataEncerramento" required
-									class="form-control">
+									id="dataEncerramento" name="dataEncerramento"
+									pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(2000|20[0-2][0-9]|2030)$"
+									title="Formato inválido. Insira entre 01/01/2000 e 31/12/2030"
+									required class="form-control">
 							</div>
 
 							<div class="form-group">
@@ -131,9 +147,5 @@
 <script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../resources/js/validatedate.js"></script>
-
-<script>
-	$(document).ready(function() {
-		$('#matricula').mask('999999999-9');
-	});
-</script>
+<script type="text/javascript" src="../resources/js/contratos.js"></script>
+<script type="text/javascript" src="../resources/js/datepicker.js"></script>

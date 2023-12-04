@@ -45,10 +45,10 @@
 						aria-expanded="false"> Cadastro </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="<c:url value="/empresa/novo" />">Empresas</a>
+							<a class="dropdown-item" href="<c:url value="/endereco/novo" />">Endereços</a>
 							<a class="dropdown-item"
 								href="<c:url value="/funcionarios/novo" />">Funcionarios</a> <a
 								class="dropdown-item" href="<c:url value="/cargo/novo" />">Cargos</a>
-							<a class="dropdown-item" href="<c:url value="/endereco/novo" />">Endereços</a>
 						</div></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -79,10 +79,10 @@
 						aria-expanded="false"> Relatórios </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="<c:url value="/empresa/lista" />">Empresas</a>
+							<a class="dropdown-item" href="<c:url value="/endereco/lista" />">Endereços</a>
 							<a class="dropdown-item"
 								href="<c:url value="/funcionarios/lista" />">Funcionarios</a> <a
 								class="dropdown-item" href="<c:url value="/cargo/lista" />">Cargos</a>
-							<a class="dropdown-item" href="<c:url value="/endereco/lista" />">Endereços</a>
 						</div></li>
 				</ul>
 

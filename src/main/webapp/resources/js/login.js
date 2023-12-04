@@ -59,10 +59,6 @@ signTogglePassword.addEventListener('click', function () {
     signTogglePassword.classList.toggle('fa-eye');
 });
 
-
-
-
-
 	const signUpButton = document.getElementById('signUp');
 	const signInButton = document.getElementById('signIn');
 	const container = document.getElementById('container');

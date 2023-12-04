@@ -95,7 +95,7 @@
 										</button>
 									</div>
 									<div class="modal-body">
-										<p>Deseja realmente excluir as licenças do funcionário?</p>
+										<p>Deseja realmente excluir a licença do funcionário?</p>
 									</div>
 									<div class="modal-footer">
 										<a

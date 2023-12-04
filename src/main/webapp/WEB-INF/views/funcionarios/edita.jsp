@@ -42,9 +42,9 @@
 				<fmt:formatDate pattern="dd/MM/yyyy"
 					value="${funcionarios.dataNascimento}" var="dataFormatada" />
 				<input type="text" id="dataNascimento" name="dataNascimento"
-					pattern="\d{1,2}/\d{1,2}/\d{4}"
-					title="Formato inválido. Use dd/MM/yyyy" required
-					class="form-control" value="${dataFormatada}">
+					pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(19[5-9][0-9]|200[0-9])$"
+					title="Formato inválido. Insira entre 01/01/1950 e 31/12/2009"
+					required class="form-control" value="${dataFormatada}">
 			</div>
 
 			<div class="form-group">
@@ -56,8 +56,10 @@
 			<div class="form-group">
 				<label for="status">Status:<span class="text-danger">*</span></label>
 				<select id="status" name="status" required class="form-select">
-					<option value="true">Ativo</option>
-					<option value="false">Inativo</option>
+					<option value="true"
+						<c:if test="${funcionarios.status eq 'true'}">selected</c:if>>Ativo</option>
+					<option value="false"
+						<c:if test="${funcionarios.status eq 'false'}">selected</c:if>>Inativo</option>
 				</select>
 			</div>
 

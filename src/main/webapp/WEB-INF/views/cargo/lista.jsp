@@ -29,7 +29,7 @@
 			<tr>
 				<th class="d-none" scope="col">ID</th>
 				<th class="font-semibold uppercase px-6" scope="col">Nome</th>
-				<th class="font-semibold uppercase px-6" scope="col">Salário</th>
+				<th class="font-semibold uppercase px-6" scope="col">Salário Base</th>
 				<th class="font-semibold uppercase px-6" scope="col">Opções</th>
 			</tr>
 		</thead>

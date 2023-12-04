@@ -33,9 +33,9 @@
 				<fmt:formatDate pattern="dd/MM/yyyy" value="${ferias.dataInicio}"
 					var="dataFormatada" />
 				<input type="text" id="dataInicio" name="dataInicio"
-					pattern="\d{1,2}/\d{1,2}/\d{4}"
-					title="Formato inválido. Use dd/MM/yyyy" required
-					class="form-control" value="${dataFormatada}">
+					pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(2000|20[0-2][0-9]|2040)$"
+					title="Formato inválido. Insira entre 01/01/2000 e 31/12/2040"
+					required class="form-control" value="${dataFormatada}">
 			</div>
 
 			<div class="form-group">
@@ -44,10 +44,10 @@
 				</label>
 				<fmt:formatDate pattern="dd/MM/yyyy"
 					value="${ferias.dataEncerramento}" var="dataFormatada" />
-				<input type="text" id="dataEncerramento"
-					name="dataEncerramento" pattern="\d{1,2}/\d{1,2}/\d{4}"
-					title="Formato inválido. Use dd/MM/yyyy" required
-					class="form-control text-danger" value="${dataFormatada}">
+				<input type="text" id="dataEncerramento" name="dataEncerramento"
+					pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(2000|20[0-2][0-9]|2040)$"
+					title="Formato inválido. Insira entre 01/01/2000 e 31/12/2040"
+					required class="form-control text-danger" value="${dataFormatada}">
 			</div>
 
 			<security:csrfInput />

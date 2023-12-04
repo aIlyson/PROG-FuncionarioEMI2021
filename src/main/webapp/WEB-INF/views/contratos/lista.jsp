@@ -61,7 +61,10 @@
 							</div>
 						</div>
 					</td>
-					<td class="coluna align-middle">${contratos.empresa.nome}</td>
+					<td class="coluna align-middle"
+						<c:if test="${contratos.status eq 'Arquivado' || contratos.status eq 'Inativo' || contratos.status eq 'Rescindido'}">
+                style="text-decoration: line-through;" title="Esse contrato está suspenso"
+            </c:if>>${contratos.empresa.nome}</td>
 					<td class="coluna align-middle">
 						<div>${contratos.cargo.nome}</div>
 						<div>
@@ -69,7 +72,10 @@
 								type="currency" currencyCode="BRL" currencySymbol="R$ " />
 						</div>
 					</td>
-					<td class="coluna align-middle">${contratos.matricula}</td>
+					<td class="coluna align-middle"
+						<c:if test="${contratos.status eq 'Arquivado' || contratos.status eq 'Inativo' || contratos.status eq 'Rescindido'}">
+                style="text-decoration: line-through;" title="Esse matrícula está suspensa"
+            </c:if>>${contratos.matricula}</td>
 					<td class="coluna align-middle"><fmt:formatDate
 							pattern="dd/MM/yyyy" value="${contratos.dataInicio}"
 							var="dataFormatada" /> ${dataFormatada}</td>
@@ -82,9 +88,9 @@
             ${contratos.status eq 'Ativo' ? '#00cc66' 
             : contratos.status eq 'Inativo' ? '#ff6666' 
             : contratos.status eq 'Vencido' ? '#8B4513' 
-            : contratos.status eq 'Arquivado' ? '#800000' 
-            : contratos.status eq 'Rescindido' ? '#B81414' 
-            : contratos.status eq 'Renovado' ? '#87CE0B' 
+            : contratos.status eq 'Arquivado' ? '#FFCA2C' 
+            : contratos.status eq 'Rescindido' ? '#111111' 
+            : contratos.status eq 'Renovado' ? '#36621B' 
             : ''};">
 							${contratos.status eq 'Ativo' ? 'Ativo' 
           : contratos.status eq 'Inativo' ? 'Inativo' 
