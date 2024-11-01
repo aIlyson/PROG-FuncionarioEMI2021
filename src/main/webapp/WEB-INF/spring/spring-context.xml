@@ -48,16 +48,16 @@
 	</bean>
 
 	<!-- dados da conexao -->
-
+	<!-- TODO: adicione sua conexão -->
 	<bean id="mysqlDataSource"
 		class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost/projetoemi_2021" />
+			value="jdbc:mysql://localhost/yourdatabase" />
 		<property name="username" value="root" />
 		<property name="password"
-			value="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" />
+			value="youpassword" />
 	</bean>
 
 	<!-- gerenciamento de jpa pelo spring -->
